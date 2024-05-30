@@ -21,7 +21,8 @@ import com.comcast.crm.generic.fileutility.ExcelUtility;
 import com.comcast.crm.generic.fileutility.FileUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
 import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
-import com.comcast.crm.objectrepositoryutility.Home;
+import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
+import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -32,6 +33,7 @@ public class BaseClass {
 	public FileUtility fLib = new FileUtility();
 	public ExcelUtility eLib = new ExcelUtility();
 	public JavaUtility jLib = new JavaUtility();
+	public WebDriverUtility wLib = new WebDriverUtility();
 	public  WebDriver driver = null;
 	public  static WebDriver sdriver = null;
 
@@ -83,14 +85,14 @@ public class BaseClass {
 			String USERNAME = System.getProperty("username" , fLib.getDataFromPropertiesFile("username"));
 			String PASSWORD = System.getProperty("password" , fLib.getDataFromPropertiesFile("password"));
 			LoginPage lp = new LoginPage(driver);
-			lp.loginToapp(URL, USERNAME, PASSWORD);
+			lp.loginToApp(URL, USERNAME, PASSWORD);
 		}
 	    
 	    
 		@AfterMethod(groups = {"smokeTest", "regressionTest"})
 		public void configAM() {
 			System.out.println("=logout=");
-			Home hp = new Home(driver);
+			HomePage hp = new HomePage(driver);
 			hp.logout();
 		}
 		

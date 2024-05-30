@@ -32,6 +32,13 @@ public class WebDriverUtility {
 		
 	}
 	/**
+	 * maximize the Browser window
+	 * @param driver
+	 */
+	public void maximizeWindow(WebDriver driver) {
+		driver.manage().window().maximize();
+	}
+	/**
 	 * Wait for element visibility in DOM document
 	 * @param driver
 	 * @param element
