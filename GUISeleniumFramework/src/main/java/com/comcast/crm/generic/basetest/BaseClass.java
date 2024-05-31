@@ -41,6 +41,7 @@ public class BaseClass {
 		public void configBS() throws Throwable {
 			System.out.println("===Connect to DB , Report Config===");
 			dbLib.getDbconnection();
+			System.out.println();
 		}
 		
 		
