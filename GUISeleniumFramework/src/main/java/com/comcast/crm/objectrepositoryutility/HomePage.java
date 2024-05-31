@@ -38,12 +38,30 @@ public class HomePage {
 
 	@FindBy(linkText = "Leads")
 	private WebElement leadsLink;
+	
+	@FindBy(linkText = "Email")
+	private WebElement emailLink;
+
+	public WebElement getEmailLink() {
+		return emailLink;
+	}
 
 	@FindBy(xpath = "//img[contains(@src,\"themes/softed/images/user\")]")
 	private WebElement adminImg;
 
 	@FindBy(linkText = "Sign Out")
 	private WebElement signOutlnk;
+	
+	@FindBy(linkText = "My Preferences")
+	private WebElement myPreferenceLnk;
+
+	public WebElement getAdminImg() {
+		return adminImg;
+	}
+
+	public WebElement getMyPreferenceLnk() {
+		return myPreferenceLnk;
+	}
 
 	public WebElement getOrgLink() {
 		return orgLink;
