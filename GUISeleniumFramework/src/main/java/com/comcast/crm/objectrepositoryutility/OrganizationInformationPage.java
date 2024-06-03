@@ -5,6 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * Elements realted to After creating the organization
+ * created by - jhanvi
+ */
+
 public class OrganizationInformationPage {
 
 	WebDriver driver;
@@ -16,6 +21,9 @@ public class OrganizationInformationPage {
 
 	@FindBy(xpath = "//span[@class=\"dvHeaderText\"]")
 	private WebElement headerMsg;
+	
+	@FindBy(xpath = "//a[text()='More Information']")
+	private WebElement moreInformationLink;
 
 	@FindBy(id = "dtlview_Organization Name")
 	private WebElement orgNameText;
@@ -47,5 +55,9 @@ public class OrganizationInformationPage {
 
 	public WebElement getHeaderMsg() {
 		return headerMsg;
+	}
+	
+	public WebElement getmoreInformationLink() {
+		return moreInformationLink;
 	}
 }

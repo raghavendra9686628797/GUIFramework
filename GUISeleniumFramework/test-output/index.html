@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse-536129024\testng-customsuite.xml</span>
+                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse-2139020227\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.comcast.crm.organizationtest.EditOrganizationTest" class="method navigator-link" hash-for-method="user_is_able_to_edit_the_organization">user_is_able_to_edit_the_organization</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.comcast.crm.organizationtest.createAContactInMoreInfoTest" class="method navigator-link" hash-for-method="creata_A_Contact">creata_A_Contact</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,22 +120,20 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.comcast.crm.organizationtest.EditOrganizationTest</span>
+              <span class="class-name">com.comcast.crm.organizationtest.createAContactInMoreInfoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="user_is_able_to_edit_the_organization">
-                  </a> <!-- user_is_able_to_edit_the_organization -->
-                  <span class="method-name">user_is_able_to_edit_the_organization</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Organizations] but found []
+                  <a name="creata_A_Contact">
+                  </a> <!-- creata_A_Contact -->
+                  <span class="method-name">creata_A_Contact</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.comcast.crm.organizationtest.EditOrganizationTest.user_is_able_to_edit_the_organization(EditOrganizationTest.java:64)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at com.comcast.crm.organizationtest.createAContactInMoreInfoTest.creata_A_Contact(createAContactInMoreInfoTest.java:58)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -170,7 +168,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse-536129024\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse-2139020227\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -179,7 +177,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.comcast.crm.organizationtest.EditOrganizationTest&quot;/&gt;
+      &lt;class name=&quot;com.comcast.crm.organizationtest.createAContactInMoreInfoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -221,14 +219,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'user_is_able_to_edit_the_organization')
-data.setCell(0, 2, 'com.comcast.crm.organizationtest.EditOrganizationTest')
-data.setCell(0, 3, 7431);
+data.setCell(0, 1, 'creata_A_Contact')
+data.setCell(0, 2, 'com.comcast.crm.organizationtest.createAContactInMoreInfoTest')
+data.setCell(0, 3, 21897);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,36 +252,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.comcast.crm.organizationtest.EditOrganizationTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.comcast.crm.organizationtest.createAContactInMoreInfoTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">configBS</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">37 ms</span>
+                <span class="method-start">84 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">1410 ms</span>
+                <span class="method-start">3407 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">user_is_able_to_edit_the_organization</span>
-                <span class="method-start">3602 ms</span>
+                <span class="method-name">creata_A_Contact</span>
+                <span class="method-start">10239 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">11037 ms</span>
+                <span class="method-start">32144 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">11916 ms</span>
+                <span class="method-start">34951 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">configAS</span>
-                <span class="method-start">12077 ms</span>
+                <span class="method-start">35361 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

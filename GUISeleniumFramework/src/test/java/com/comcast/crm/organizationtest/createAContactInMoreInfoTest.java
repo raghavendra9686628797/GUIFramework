@@ -7,16 +7,18 @@ import org.testng.annotations.Test;
 import com.comcast.crm.generic.basetest.BaseClass;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
+import com.comcast.crm.objectrepositoryutility.ContactInformationPage;
 import com.comcast.crm.objectrepositoryutility.CreatingNewOrganizationPage;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OrganizationInformationPage;
 import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
+import com.comcast.crm.objectrepositoryutility.moreInformationPage;
 
+public class createAContactInMoreInfoTest extends BaseClass {
 
-public class EditOrganizationTest extends BaseClass {
-	
 	@Test
-	public void  user_is_able_to_edit_the_organization() throws Throwable
+	
+	public void  creata_A_Contact() throws Throwable
 	{
 		WebDriverUtility wd = new WebDriverUtility();
 		wd.waitForPageToLoad(driver);
@@ -46,39 +48,38 @@ public class EditOrganizationTest extends BaseClass {
 		 * creating organization with industry
 		 */
 		newOrgPage.createOrg(orgName, IndustryValue);
-		String OrganizationInformationText = eLib.getDataFromExcel("Organizations", 1, 5);
+		
 		
 		OrganizationInformationPage oip = new OrganizationInformationPage(driver);
-		String TosterMessage = oip.getHeaderMsg().getText();
-		
-		boolean getBoolean = TosterMessage.contains(OrganizationInformationText);
-		Assert.assertTrue(getBoolean);
-		
-		hp.getOrgLink().click();
-		String OrganizationText = eLib.getDataFromExcel("Organizations", 1, 8);
-		
-		wd.waitForElementPresent(driver,op.getorganizationText());
-		
-		String organizationsTextPage = op.getorganizationText().getText();
-		System.out.println(organizationsTextPage);
-		Assert.assertEquals(OrganizationText, organizationsTextPage);
-		
-		driver.findElement(By.xpath("//a[text()='"+orgName+"']/../..//a[text()=\"edit\"]")).click();
-		
-		String editedIndustryText = eLib.getDataFromExcel("Organizations", 1, 6);
-		
-		wd.select(newOrgPage.getIndustryDD(), editedIndustryText);
-		newOrgPage.getSaveBtn().click();
-		
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
-		String industryText = oip.getIndustryText().getText();
-		Assert.assertNotEquals(industryText, IndustryValue);
 		
 		
+		/** navigating to more info page
+		 * 
+		 */
 		
+		oip.getmoreInformationLink().click();
+		String moreInfoText = eLib.getDataFromExcel("Organizations", 4, 5);
+		moreInformationPage mip = new moreInformationPage(driver);
+		wd.waitandClickAjaxElement(driver,(By) mip.getmoreInformationLink());
+		mip.getmoreInformationLink().click();
+		String moreInformationPageText = mip.getHeaderMsg().getText();
 		
+		boolean getBooleanValue = moreInformationPageText.contains(moreInfoText);
+		Assert.assertTrue(getBooleanValue);
 		
+		/**
+		 * creating contact from more info page
+		 */
+		mip.getcontactsTab().click();
+		mip.getaddcontactButton().click();
+		String contactText = eLib.getDataFromExcel("Organizations", 4, 6);
 		
-	}
+		ContactInformationPage cip = new ContactInformationPage(driver);
+		String creatingNewContactText = cip.getHeaderTxt().getText();
+		Assert.assertEquals(creatingNewContactText, contactText);
+		
+		String contactName = eLib.getDataFromExcel("Organizations", 4, 7)+num;
+		cip.createContact(contactName);
+		driver.findElement(By.xpath("//tr[@bgcolor=\"white\"]//td//a[text()='"+contactName+"']")).isDisplayed();
+}
 }

@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.comcast.crm.organizationtest.EditOrganizationTest">
+      <class name="com.comcast.crm.organizationtest.createAContactInMoreInfoTest">
         <methods>
           <include name="configBM"/>
           <include name="configAM"/>
+          <include name="creata_A_Contact"/>
           <include name="configBS"/>
           <include name="configBC"/>
           <include name="configAS"/>
           <include name="configAC"/>
-          <include name="user_is_able_to_edit_the_organization"/>
         </methods>
-      </class> <!-- com.comcast.crm.organizationtest.EditOrganizationTest -->
+      </class> <!-- com.comcast.crm.organizationtest.createAContactInMoreInfoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
