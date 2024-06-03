@@ -14,8 +14,11 @@ public class OrganizationsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//img[@alt=\"Create Organization...\"]")
+	@FindBy(xpath ="//img[@alt=\"Create Organization...\"]")
 	private WebElement createNewOrgBtn;
+	
+	@FindBy(xpath = "//a[text()=\"Organizations\" and @class=\"hdrLink\"]")
+	private WebElement organizationText;
 
 	@FindBy(name = "search_text")
 	private WebElement serchEdt;
@@ -28,6 +31,10 @@ public class OrganizationsPage {
 
 	public WebElement getSerchEdt() {
 		return serchEdt;
+	}
+	
+	public WebElement getorganizationText() {
+		return organizationText;
 	}
 
 	public WebElement getSearchDD() {
