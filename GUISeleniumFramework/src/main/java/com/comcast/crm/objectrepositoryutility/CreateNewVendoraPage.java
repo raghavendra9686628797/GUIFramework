@@ -4,7 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * 
+ * @author Sanjay
+ * Contains the elements of create new vendor page
+ *
+ */
 public class CreateNewVendoraPage {
 	WebDriver driver;
 	public CreateNewVendoraPage(WebDriver driver) {
