@@ -1,7 +1,7 @@
 package com.comcast.crm.producttest;
 
 import org.openqa.selenium.By;
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.comcast.crm.generic.basetest.BaseClass;
@@ -42,7 +42,7 @@ public class CreateProductTest extends BaseClass{
 		ProductInformationPage Pip = new ProductInformationPage(driver);
 		String hdrMsg = Pip.getHeaderMsg().getText();
 		boolean getBoolean = hdrMsg.contains(productName);
-		AssertJUnit.assertTrue(getBoolean);
+		Assert.assertTrue(getBoolean);
 		
 	}
 	@Test
@@ -70,9 +70,9 @@ public class CreateProductTest extends BaseClass{
 		ProductInformationPage Pip = new ProductInformationPage(driver);
 		String hdrMsg = Pip.getHeaderMsg().getText();
 		boolean getBoolean = hdrMsg.contains(productName);
-		AssertJUnit.assertTrue(getBoolean);
+		Assert.assertTrue(getBoolean);
 		String pcategoryTxt=Pip.getProductCategoryTxt().getText().trim();
-		AssertJUnit.assertEquals(elib.getDataFromExcel("Products", 3, 2), pcategoryTxt);
+		Assert.assertEquals(elib.getDataFromExcel("Products", 3, 2), pcategoryTxt);
 		
 	}
 	@Test
@@ -119,9 +119,9 @@ public class CreateProductTest extends BaseClass{
 		ProductInformationPage Pip = new ProductInformationPage(driver);
 		String hdrMsg = Pip.getHeaderMsg().getText();
 		boolean getBoolean = hdrMsg.contains(productName);
-		AssertJUnit.assertTrue(getBoolean);
+		Assert.assertTrue(getBoolean);
 		String actVendorName = Pip.getVendorNameTxt().getText().trim();
-		AssertJUnit.assertEquals(actVendorName, vendorName);
+		Assert.assertEquals(actVendorName, vendorName);
 		
 	}
 	@Test(dependsOnMethods =  "Create_Product_With_Mandatory_Fields")
@@ -148,7 +148,7 @@ public class CreateProductTest extends BaseClass{
 		/*Verify existed product information is displayed*/
 		String hdrMsg = pip.getHeaderMsg().getText();
 		boolean getBoolean = hdrMsg.contains(productName);
-		AssertJUnit.assertTrue(getBoolean);
+		Assert.assertTrue(getBoolean);
 		
 		pip.getmoreInformationBtn().isDisplayed();
 		pip.getmoreInformationBtn().click();
@@ -165,7 +165,7 @@ public class CreateProductTest extends BaseClass{
 		/*Verify organization is added to product*/
 		
 		String OrgNameMore = pip.getorganizationNameinMoreTxt().getText().trim();
-		AssertJUnit.assertEquals(orgName, OrgNameMore);
+		Assert.assertEquals(orgName, OrgNameMore);
 	}	
 	@Test
 	public void Delete_the_product() throws Throwable {
