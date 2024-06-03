@@ -38,7 +38,7 @@ public class HomePage {
 
 	@FindBy(linkText = "Leads")
 	private WebElement leadsLink;
-	
+
 	@FindBy(linkText = "Email")
 	private WebElement emailLink;
 
@@ -51,13 +51,12 @@ public class HomePage {
 
 	@FindBy(linkText = "Sign Out")
 	private WebElement signOutlnk;
-	
+
 	@FindBy(linkText = "My Preferences")
 	private WebElement myPreferenceLnk;
-	
+
 	@FindBy(linkText = "Calendar")
 	private WebElement calendarLnk;
-	
 
 	public WebElement getCalendarLnk() {
 		return calendarLnk;
@@ -69,6 +68,20 @@ public class HomePage {
 
 	public WebElement getMyPreferenceLnk() {
 		return myPreferenceLnk;
+	}
+
+	@FindBy(linkText = "Opportunities")
+	private WebElement opportunitiesLink;
+
+	@FindBy(xpath = "//a[contains(text(),'Home')]")
+	private WebElement homeLink;
+
+	public WebElement getHomeLink() {
+		return homeLink;
+	}
+
+	public WebElement getOpportunitiesLink() {
+		return opportunitiesLink;
 	}
 
 	public WebElement getOrgLink() {
