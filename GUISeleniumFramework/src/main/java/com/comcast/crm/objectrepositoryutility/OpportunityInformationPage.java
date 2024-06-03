@@ -13,5 +13,8 @@ public class OpportunityInformationPage {
 	}
 	@FindBy(xpath = "//span[@class=\"dvHeaderText\"]")
 	private WebElement headerTxt;
+	public WebElement getHeaderTxt() {
+		return headerTxt;
+	}
 	
 }
