@@ -39,6 +39,13 @@ public class HomePage {
 	@FindBy(linkText = "Leads")
 	private WebElement leadsLink;
 
+	@FindBy(linkText = "Email")
+	private WebElement emailLink;
+
+	public WebElement getEmailLink() {
+		return emailLink;
+	}
+
 	@FindBy(xpath = "//img[contains(@src,\"themes/softed/images/user\")]")
 	private WebElement adminImg;
 
@@ -55,6 +62,38 @@ public class HomePage {
 	 */
 	public WebElement getMorelink() {
 		return morelink;
+	}
+
+	@FindBy(linkText = "My Preferences")
+	private WebElement myPreferenceLnk;
+
+	@FindBy(linkText = "Calendar")
+	private WebElement calendarLnk;
+
+	public WebElement getCalendarLnk() {
+		return calendarLnk;
+	}
+
+	public WebElement getAdminImg() {
+		return adminImg;
+	}
+
+	public WebElement getMyPreferenceLnk() {
+		return myPreferenceLnk;
+	}
+
+	@FindBy(linkText = "Opportunities")
+	private WebElement opportunitiesLink;
+
+	@FindBy(xpath = "//a[contains(text(),'Home')]")
+	private WebElement homeLink;
+
+	public WebElement getHomeLink() {
+		return homeLink;
+	}
+
+	public WebElement getOpportunitiesLink() {
+		return opportunitiesLink;
 	}
 
 	public WebElement getOrgLink() {

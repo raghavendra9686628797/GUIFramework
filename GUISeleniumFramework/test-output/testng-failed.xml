@@ -3,9 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.comcast.crm.campaigns.CreateCampaignWithProduct">
+=======
+      <class name="com.comcast.crm.oppotunityTest.OpportunityTest">
+>>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
         <methods>
           <include name="configBM"/>
+<<<<<<< HEAD
+=======
+          <include name="Create_opportunity_with_ContactTest"/>
+>>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
           <include name="configAM"/>
           <include name="campaignWithProduct"/>
           <include name="configBS"/>
@@ -13,7 +21,11 @@
           <include name="configAS"/>
           <include name="configAC"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.comcast.crm.campaigns.CreateCampaignWithProduct -->
+=======
+      </class> <!-- com.comcast.crm.oppotunityTest.OpportunityTest -->
+>>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
