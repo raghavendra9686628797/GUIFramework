@@ -23,6 +23,12 @@ public class CreateNewOpportunityPage {
 	private WebElement relatedTxtBox;
 	@FindBy(xpath = "//input[@title=\"Save [Alt+S]\"]")
 	private WebElement saveBtn;
+	@FindBy(xpath = "//span[text()='Creating New Opportunity']")
+	private WebElement createNewOppText;
+	
+	public WebElement getCreateNewOppText() {
+		return createNewOppText;
+	}
 	public WebElement getOppNameTxtBox() {
 		return oppNameTxtBox;
 	}
