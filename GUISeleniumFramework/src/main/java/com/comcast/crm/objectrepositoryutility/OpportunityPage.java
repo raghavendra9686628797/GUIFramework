@@ -18,7 +18,11 @@ public class OpportunityPage {
 	public WebElement getAddNewOppBtn() {
 		return addNewOppBtn;
 	}
-	
+	@FindBy(xpath = "//td[@class=\"moduleName\"]//a[text()='Opportunities']")
+	private WebElement oppLink;
+	public WebElement getOppLink() {
+		return oppLink;
+	}
 	
 	
 }
