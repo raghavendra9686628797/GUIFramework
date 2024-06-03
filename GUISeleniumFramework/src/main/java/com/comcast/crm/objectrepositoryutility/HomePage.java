@@ -44,6 +44,18 @@ public class HomePage {
 
 	@FindBy(linkText = "Sign Out")
 	private WebElement signOutlnk;
+	
+	@FindBy(xpath = "//a[text()='More']")
+	private WebElement morelink;
+	/**
+	 * 
+	 * @author Raghavendra
+	 *        
+	 *
+	 */
+	public WebElement getMorelink() {
+		return morelink;
+	}
 
 	public WebElement getOrgLink() {
 		return orgLink;
