@@ -3,19 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.comcast.crm.contacttest.CreateContactTest">
+      <class name="com.comcast.crm.producttest.CreateProductTest">
         <methods>
-          <include name="createConTactTest"/>
-          <include name="createContactWithOrgTest"/>
+          <include name="Create_Product_With_Mandatory_Fields"/>
           <include name="configBM"/>
-          <include name="createContactWithsupportDateTest"/>
+          <include name="Add_Organization_To_ExistedProduct"/>
           <include name="configAM"/>
           <include name="configBS"/>
           <include name="configBC"/>
           <include name="configAS"/>
           <include name="configAC"/>
         </methods>
-      </class> <!-- com.comcast.crm.contacttest.CreateContactTest -->
+      </class> <!-- com.comcast.crm.producttest.CreateProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

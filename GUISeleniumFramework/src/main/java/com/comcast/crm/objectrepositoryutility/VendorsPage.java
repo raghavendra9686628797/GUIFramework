@@ -16,8 +16,24 @@ public class VendorsPage {
 	}
 	
 	@FindBy(xpath = "//img[@title=\"Create Vendor...\"]")
-	private WebElement createLeadImg;
+	private WebElement createVendorImg;
 	
+	public WebElement getCreateVendorImg() {
+		return createVendorImg;
+	}
+
+	public WebElement getSearchForedt() {
+		return searchForedt;
+	}
+
+	public WebElement getSearchFieldDD() {
+		return searchFieldDD;
+	}
+
+	public WebElement getSearchNowBtn() {
+		return searchNowBtn;
+	}
+
 	@FindBy(name="search_text")
 	private WebElement searchForedt;
 	
