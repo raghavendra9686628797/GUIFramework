@@ -1,7 +1,6 @@
 package com.comcast.crm.leadtest;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,6 +16,8 @@ import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.LeadInformationPage;
 import com.comcast.crm.objectrepositoryutility.LeadsPage;
 import com.comcast.crm.objectrepositoryutility.MyPreferencesPage;
+import com.comcast.crm.objectrepositoryutility.OpportunityInformationPage;
+import com.comcast.crm.objectrepositoryutility.OpportunityPage;
 import com.comcast.crm.objectrepositoryutility.OrganizationInformationPage;
 
 public class E2ELeadTest extends BaseClass {
@@ -278,14 +279,14 @@ public class E2ELeadTest extends BaseClass {
 		orgName = cip.getOrgNamelnk().getText();
 		Assert.assertEquals(orgName, company);
 	}
-	
+
 	@Test(groups = "regressionTest")
 	public void convert_Lead_To_Opportunity() throws Throwable {
 
 		String lastName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "Last Name")
 				+ jLib.getRandomNumber();
 		String company = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "Company");
-		String opportunityName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "Opportunity Name");
+		String opportunityName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "Opportunity Name")+ jLib.getRandomNumber();
 		String searchInOption = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "In");
 
 		/* Navigate to Create Lead Page */
@@ -324,8 +325,16 @@ public class E2ELeadTest extends BaseClass {
 		String orgName = oip.getOrgNameText().getText();
 		Assert.assertEquals(orgName, company);
 		
-		/* Navigate to opportunity Page */
+		/* Navigate to opportunity Page and search the created opportunity*/
+		hp.getOpportunitiesLink().click();
+		OpportunityPage opp = new OpportunityPage(driver);
+		opp.getSearchForEdt().sendKeys(opportunityName);
+		wLib.select(opp.getSearchFieldDD(), searchInOption);
+		opp.getSearchNowBtn().click();
+		driver.findElement(By.linkText(opportunityName)).click();
 		
+		/* Verify the opportunity */
+		OpportunityInformationPage oppip  = new OpportunityInformationPage(driver);
 		
 	}
 }

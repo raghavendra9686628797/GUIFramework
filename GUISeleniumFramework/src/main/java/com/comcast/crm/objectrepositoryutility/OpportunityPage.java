@@ -15,10 +15,30 @@ public class OpportunityPage {
 	}
 	@FindBy(xpath = "//img[@alt=\"Create Opportunity...\"]")
 	private WebElement addNewOppBtn;
+	
+	@FindBy(name = "search_text")
+	private WebElement searchForEdt;
+
+	@FindBy(id = "bas_searchfield")
+	private WebElement searchFieldDD;
+
+	@FindBy(xpath = "//input[contains(@value,\"Search Now\")]")
+	private WebElement searchNowBtn;
+	
 	public WebElement getAddNewOppBtn() {
 		return addNewOppBtn;
 	}
-	
-	
+
+	public WebElement getSearchForEdt() {
+		return searchForEdt;
+	}
+
+	public WebElement getSearchFieldDD() {
+		return searchFieldDD;
+	}
+
+	public WebElement getSearchNowBtn() {
+		return searchNowBtn;
+	}
 	
 }
