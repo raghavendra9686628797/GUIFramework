@@ -1,5 +1,4 @@
 package com.comcast.crm.objectrepositoryutility;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,17 +6,16 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * 
  * @author Sanjay
- *This class contains elements of Leads page
+ * This contains elements of Vendors page
  */
-public class LeadsPage {
+public class VendorsPage {
 	WebDriver driver;
-
-	public LeadsPage(WebDriver driver) {
+	public VendorsPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//img[@title=\"Create Lead...\"]")
+	@FindBy(xpath = "//img[@title=\"Create Vendor...\"]")
 	private WebElement createLeadImg;
 	
 	@FindBy(name="search_text")
@@ -29,20 +27,4 @@ public class LeadsPage {
 	@FindBy(xpath="//input[contains(@value,\"Search Now\")]")
 	private WebElement searchNowBtn;
 
-	public WebElement getSearchForedt() {
-		return searchForedt;
-	}
-
-	public WebElement getSearchFieldDD() {
-		return searchFieldDD;
-	}
-
-	public WebElement getSearchNowBtn() {
-		return searchNowBtn;
-	}
-
-	public WebElement getCreateLeadImg() {
-		return createLeadImg;
-	}
-	
 }
