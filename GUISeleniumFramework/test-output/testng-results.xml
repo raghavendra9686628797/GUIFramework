@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-31T09:11:49Z" name="Default suite" finished-at="2024-05-31T09:12:09Z" duration-ms="20495">
+  <suite started-at="2024-06-03T04:55:32Z" name="Default suite" finished-at="2024-06-03T04:55:50Z" duration-ms="17269">
     <groups>
       <group name="regressionTest">
-        <method signature="LeadTest.create_Lead_With_Without_Company()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" name="create_Lead_With_Without_Company" class="com.comcast.crm.leadtest.LeadTest"/>
+        <method signature="LeadTest.save_Mail_For_Created_Lead()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" name="save_Mail_For_Created_Lead" class="com.comcast.crm.leadtest.LeadTest"/>
       </group> <!-- regressionTest -->
     </groups>
-    <test started-at="2024-05-31T09:11:49Z" name="Default test" finished-at="2024-05-31T09:12:09Z" duration-ms="20495">
+    <test started-at="2024-06-03T04:55:32Z" name="Default test" finished-at="2024-06-03T04:55:50Z" duration-ms="17269">
       <class name="com.comcast.crm.leadtest.LeadTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" started-at="2024-05-31T09:11:49Z" name="configBS" finished-at="2024-05-31T09:11:49Z" duration-ms="68" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" started-at="2024-06-03T04:55:32Z" name="configBS" finished-at="2024-06-03T04:55:32Z" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" started-at="2024-05-31T09:11:49Z" name="configBC" finished-at="2024-05-31T09:11:52Z" duration-ms="2735" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" started-at="2024-06-03T04:55:32Z" name="configBC" finished-at="2024-06-03T04:55:34Z" duration-ms="1436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" started-at="2024-05-31T09:11:52Z" name="configBM" finished-at="2024-05-31T09:11:57Z" duration-ms="5274" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" started-at="2024-06-03T04:55:34Z" name="configBM" finished-at="2024-06-03T04:55:36Z" duration-ms="2223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="create_Lead_With_Without_Company()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" started-at="2024-05-31T09:11:57Z" name="create_Lead_With_Without_Company" finished-at="2024-05-31T09:12:07Z" duration-ms="9790" status="PASS">
+        <test-method signature="save_Mail_For_Created_Lead()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" started-at="2024-06-03T04:55:36Z" name="save_Mail_For_Created_Lead" finished-at="2024-06-03T04:55:48Z" duration-ms="12413" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create_Lead_With_Without_Company -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" started-at="2024-05-31T09:12:07Z" name="configAM" finished-at="2024-05-31T09:12:09Z" duration-ms="2263" status="PASS">
+        </test-method> <!-- save_Mail_For_Created_Lead -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" started-at="2024-06-03T04:55:48Z" name="configAM" finished-at="2024-06-03T04:55:49Z" duration-ms="972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" started-at="2024-05-31T09:12:09Z" name="configAC" finished-at="2024-05-31T09:12:09Z" duration-ms="401" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" started-at="2024-06-03T04:55:49Z" name="configAC" finished-at="2024-06-03T04:55:50Z" duration-ms="210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@3f9342d4]" started-at="2024-05-31T09:12:09Z" name="configAS" finished-at="2024-05-31T09:12:09Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.leadtest.LeadTest@2bd08376]" started-at="2024-06-03T04:55:50Z" name="configAS" finished-at="2024-06-03T04:55:50Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->

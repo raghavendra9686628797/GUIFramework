@@ -15,6 +15,18 @@ public class EmailPage {
 	@FindBy(id="search_text")
 	private WebElement searchEdt;
 	
+	@FindBy(name="find")
+	private WebElement findBtn;
+	
+	@FindBy(xpath="//b[contains(.,\"From\")]/../following-sibling::td[2]")
+	private WebElement fromEmailtxt;
+	
+	@FindBy(xpath="//b[contains(.,\"To\")]/../following-sibling::td[2]")
+	private WebElement toEmailtxt;
+	
+	@FindBy(xpath="//b[contains(.,\"Subject\")]/../following-sibling::td[2]")
+	private WebElement subjecttxt;
+	
 	public WebElement getSearchEdt() {
 		return searchEdt;
 	}
@@ -34,16 +46,5 @@ public class EmailPage {
 	public WebElement getSubjecttxt() {
 		return subjecttxt;
 	}
-	@FindBy(name="find")
-	private WebElement findBtn;
-	
-	@FindBy(xpath="//b[contains(.,\"From\")]/../following-sibling::td[2]")
-	private WebElement fromEmailtxt;
-	
-	@FindBy(xpath="//b[contains(.,\"To\")]/../following-sibling::td[2]")
-	private WebElement toEmailtxt;
-	
-	@FindBy(xpath="//b[contains(.,\"Subject\")]/../following-sibling::td[2]")
-	private WebElement subjecttxt;
 
 }

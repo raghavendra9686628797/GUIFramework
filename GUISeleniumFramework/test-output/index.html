@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse-1596189052\testng-customsuite.xml</span>
+                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse-1553152606\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.comcast.crm.leadtest.LeadTest" class="method navigator-link" hash-for-method="create_Lead_With_Without_Company">create_Lead_With_Without_Company</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.comcast.crm.leadtest.LeadTest" class="method navigator-link" hash-for-method="save_Mail_For_Created_Lead">save_Mail_For_Created_Lead</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,9 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="create_Lead_With_Without_Company">
-                  </a> <!-- create_Lead_With_Without_Company -->
-                  <span class="method-name">create_Lead_With_Without_Company</span>
+                  <a name="save_Mail_For_Created_Lead">
+                  </a> <!-- save_Mail_For_Created_Lead -->
+                  <span class="method-name">save_Mail_For_Created_Lead</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse-1596189052\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse-1553152606\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,7 +146,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.comcast.crm.leadtest.LeadTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;create_Lead_With_Without_Company&quot;/&gt;
+          &lt;include name=&quot;save_Mail_For_Created_Lead&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.comcast.crm.leadtest.LeadTest --&gt;
     &lt;/classes&gt;
@@ -176,7 +176,7 @@
               <span class="test-group-name">regressionTest</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">create_Lead_With_Without_Company</span>
+                <span class="method-in-group-name">save_Mail_For_Created_Lead</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -198,14 +198,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'create_Lead_With_Without_Company')
+data.setCell(0, 1, 'save_Mail_For_Created_Lead')
 data.setCell(0, 2, 'com.comcast.crm.leadtest.LeadTest')
-data.setCell(0, 3, 9790);
+data.setCell(0, 3, 12413);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,7 +220,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">7 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -228,15 +228,17 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">duplicate_Lead</span>
                 <br/>
-                <span class="ignored-method-name">create_Lead_With_Without_Last_Name</span>
-                <br/>
                 <span class="ignored-method-name">edit_Last_Name_Of_Lead</span>
+                <br/>
+                <span class="ignored-method-name">create_Lead_With_Without_Last_Name</span>
                 <br/>
                 <span class="ignored-method-name">edit_Company_Of_Lead</span>
                 <br/>
                 <span class="ignored-method-name">delete_Lead</span>
                 <br/>
                 <span class="ignored-method-name">cancel_The_Deleting_Lead</span>
+                <br/>
+                <span class="ignored-method-name">create_Lead_With_Without_Company</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -255,27 +257,27 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">86 ms</span>
+                <span class="method-start">42 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">2833 ms</span>
+                <span class="method-start">1484 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">create_Lead_With_Without_Company</span>
-                <span class="method-start">8107 ms</span>
+                <span class="method-name">save_Mail_For_Created_Lead</span>
+                <span class="method-start">3707 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">17897 ms</span>
+                <span class="method-start">16120 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">20162 ms</span>
+                <span class="method-start">17093 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">configAS</span>
-                <span class="method-start">20594 ms</span>
+                <span class="method-start">17320 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
