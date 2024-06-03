@@ -1,5 +1,16 @@
 package com.comcast.crm.objectrepositoryutility;
 
-public class OpportunityPage {
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
+public class OpportunityPage {
+	WebDriver driver;
+	public OpportunityPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	
+	
 }
