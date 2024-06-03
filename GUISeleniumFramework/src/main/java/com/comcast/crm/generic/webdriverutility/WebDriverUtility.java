@@ -219,6 +219,16 @@ public class WebDriverUtility {
 		Select sel = new Select(element);
 		sel.selectByIndex(index);
 	}
+	/**
+	 * select the value from the dropDown based on value attribute
+	 * 
+	 * @param element
+	 * @param value
+	 */
+	public void selectByValue(WebElement element, String value) {
+		Select sel = new Select(element);
+		sel.selectByValue(value);
+	}
 
 	/**
 	 * select the value from dynamic dropdown based on text
