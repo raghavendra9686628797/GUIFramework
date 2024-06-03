@@ -24,7 +24,7 @@ public class createAContactInMoreInfoTest extends BaseClass {
 		wd.waitForPageToLoad(driver);
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
-		String createOrgText = eLib.getDataFromExcel("Organizations", 1, 1);
+		String createOrgText = eLib.getDataFromExcel("Organizations", 4, 1);
 		
 		OrganizationsPage op = new OrganizationsPage(driver);
 		op.getCreateNewOrgBtn().click();
@@ -37,11 +37,11 @@ public class createAContactInMoreInfoTest extends BaseClass {
 		 * generating random number
 		 */
 		
-		JavaUtility ju = new JavaUtility();
-		int num = ju.getRandomNumber();
 		
-		String orgName = eLib.getDataFromExcel("Organizations", 1, 2) + num;
-		String IndustryValue = eLib.getDataFromExcel("Organizations", 1, 3);
+		int num = jLib.getRandomNumber();
+		
+		String orgName = eLib.getDataFromExcel("Organizations", 4, 2) + num;
+		String IndustryValue = eLib.getDataFromExcel("Organizations", 4, 3);
 		
 		
 		/**
@@ -58,21 +58,31 @@ public class createAContactInMoreInfoTest extends BaseClass {
 		 */
 		
 		oip.getmoreInformationLink().click();
-		String moreInfoText = eLib.getDataFromExcel("Organizations", 4, 5);
+		
+		  String moreInfoText = eLib.getDataFromExcel("Organizations", 4, 5);
+		  
+		  System.out.println("---------");
+		  
+	//	  wLib.mousemoveOnElement(driver,oip.getmoreInformationLink());
+		 
 		moreInformationPage mip = new moreInformationPage(driver);
-		wd.waitandClickAjaxElement(driver,(By) mip.getmoreInformationLink());
-		mip.getmoreInformationLink().click();
+		mip.getcontactsTab().click();
+		System.out.println("//////////////////");
 		String moreInformationPageText = mip.getHeaderMsg().getText();
 		
 		boolean getBooleanValue = moreInformationPageText.contains(moreInfoText);
 		Assert.assertTrue(getBooleanValue);
 		
+		System.out.println("kkkkkkkkkkkkkkkk");
+		
 		/**
 		 * creating contact from more info page
 		 */
+		mip.getcontactsTab().isDisplayed();
+		String contactText = eLib.getDataFromExcel("Organizations", 4, 6);
 		mip.getcontactsTab().click();
 		mip.getaddcontactButton().click();
-		String contactText = eLib.getDataFromExcel("Organizations", 4, 6);
+		
 		
 		ContactInformationPage cip = new ContactInformationPage(driver);
 		String creatingNewContactText = cip.getHeaderTxt().getText();

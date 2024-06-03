@@ -19,13 +19,13 @@ public class moreInformationPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//span[@class=\"dvHeaderText\"]")
+	@FindBy(xpath= "//span[@class='lvtHeaderText']")
 	private WebElement headerMsg;
 	
 	@FindBy(xpath = "//a[text()='More Information']")
 	private WebElement moreInformationLink;
 	
-	@FindBy(xpath = "//img[@id=\"show_Accounts_Contacts\"]")
+	@FindBy(xpath="//img[@id=\"show_Accounts_Contacts\"]")
 	private WebElement contactsTab;
 	
 	@FindBy(xpath = "//input[@value=\"Add Contact\"]")

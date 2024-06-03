@@ -45,8 +45,13 @@ public class EditOrganizationTest extends BaseClass {
 		/**
 		 * creating organization with industry
 		 */
+		
 		newOrgPage.createOrg(orgName, IndustryValue);
-		String OrganizationInformationText = eLib.getDataFromExcel("Organizations", 1, 5);
+		
+		/**
+		 * validation
+		 */
+		String OrganizationInformationText = eLib.getDataFromExcel("Organizations", 1, 4);
 		
 		OrganizationInformationPage oip = new OrganizationInformationPage(driver);
 		String TosterMessage = oip.getHeaderMsg().getText();
@@ -54,8 +59,14 @@ public class EditOrganizationTest extends BaseClass {
 		boolean getBoolean = TosterMessage.contains(OrganizationInformationText);
 		Assert.assertTrue(getBoolean);
 		
+		System.out.println("org is created");
+		
+		/**
+		 * navigating to organziation page from organization info page and validation
+		 */
+		
 		hp.getOrgLink().click();
-		String OrganizationText = eLib.getDataFromExcel("Organizations", 1, 8);
+		String OrganizationText = eLib.getDataFromExcel("Organizations", 1, 7);
 		
 		wd.waitForElementPresent(driver,op.getorganizationText());
 		
@@ -63,17 +74,25 @@ public class EditOrganizationTest extends BaseClass {
 		System.out.println(organizationsTextPage);
 		Assert.assertEquals(OrganizationText, organizationsTextPage);
 		
+		/**
+		 * editing the organization
+		 * 
+		 */
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']/../..//a[text()=\"edit\"]")).click();
 		
-		String editedIndustryText = eLib.getDataFromExcel("Organizations", 1, 6);
+		String editedIndustryText = eLib.getDataFromExcel("Organizations", 1, 5);
 		
 		wd.select(newOrgPage.getIndustryDD(), editedIndustryText);
 		newOrgPage.getSaveBtn().click();
 		
 		Thread.sleep(5000);
+		/**
+		 * validating the changes
+		 */
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
 		String industryText = oip.getIndustryText().getText();
 		Assert.assertNotEquals(industryText, IndustryValue);
+		System.out.println("end");
 		
 		
 		

@@ -36,6 +36,9 @@ public class OrganizationInformationPage {
 
 	@FindBy(id = "dtlview_Type")
 	private WebElement typeText;
+	
+	@FindBy(xpath= "//a[text()=\"Add Note\"]")
+	private WebElement addNoteLink;
 
 	public WebElement getIndustryText() {
 		return industryText;
@@ -59,5 +62,9 @@ public class OrganizationInformationPage {
 	
 	public WebElement getmoreInformationLink() {
 		return moreInformationLink;
+	}
+	
+	public WebElement getaddNoteLink() {
+		return addNoteLink;
 	}
 }

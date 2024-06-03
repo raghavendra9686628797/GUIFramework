@@ -35,6 +35,9 @@ public class HomePage {
 
 	@FindBy(linkText = "Contacts")
 	private WebElement contactLink;
+	
+	@FindBy(xpath = "//a[text()='Documents']")
+	private WebElement documentsLink;
 
 	@FindBy(linkText = "Leads")
 	private WebElement leadsLink;
@@ -51,6 +54,10 @@ public class HomePage {
 
 	public WebElement getContactLink() {
 		return contactLink;
+	}
+	
+	public WebElement getdocumentsLink() {
+		return documentsLink;
 	}
 
 	public void logout() {
