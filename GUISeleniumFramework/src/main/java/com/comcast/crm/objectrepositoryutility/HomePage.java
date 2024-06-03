@@ -54,6 +54,14 @@ public class HomePage {
 	
 	@FindBy(linkText = "My Preferences")
 	private WebElement myPreferenceLnk;
+	
+	@FindBy(linkText = "Calendar")
+	private WebElement calendarLnk;
+	
+
+	public WebElement getCalendarLnk() {
+		return calendarLnk;
+	}
 
 	public WebElement getAdminImg() {
 		return adminImg;
