@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * @author Asha R
+ */
 public class CreateNewInvoicePage {
 	WebDriver driver;
 	public CreateNewInvoicePage(WebDriver driver) {
@@ -19,4 +21,29 @@ public class CreateNewInvoicePage {
 	@FindBy(xpath = "//input[@title=\"Save [Alt+S]\"]") private WebElement saveBtn;
 	@FindBy(id = "searchIcon1") private WebElement selectItemBtn;
 	@FindBy(id="qty1") private WebElement qtyTxtBox;
+	public WebElement getCreateNewInvoiceTxt() {
+		return createNewInvoiceTxt;
+	}
+	public WebElement getSubjectTxtBox() {
+		return subjectTxtBox;
+	}
+	public WebElement getSelectorgBtn() {
+		return selectorgBtn;
+	}
+	public WebElement getBillingAddTextArea() {
+		return billingAddTextArea;
+	}
+	public WebElement getCopyBilAddRadioBtn() {
+		return copyBilAddRadioBtn;
+	}
+	public WebElement getSaveBtn() {
+		return saveBtn;
+	}
+	public WebElement getSelectItemBtn() {
+		return selectItemBtn;
+	}
+	public WebElement getQtyTxtBox() {
+		return qtyTxtBox;
+	}
+	
 }
