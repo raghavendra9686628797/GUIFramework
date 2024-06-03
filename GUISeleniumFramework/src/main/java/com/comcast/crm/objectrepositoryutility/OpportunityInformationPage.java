@@ -13,10 +13,13 @@ public class OpportunityInformationPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath = "//span[@class=\"dvHeaderText\"]")
-	private WebElement headerTxt;
+	@FindBy(xpath = "//span[@class=\"dvHeaderText\"]")private WebElement headerTxt;
+	@FindBy(xpath = "//a[text()='Create Invoice']") private WebElement createInvoiceLink;
 	public WebElement getHeaderTxt() {
 		return headerTxt;
+	}
+	public WebElement getCreateInvoiceLink() {
+		return createInvoiceLink;
 	}
 	
 }
