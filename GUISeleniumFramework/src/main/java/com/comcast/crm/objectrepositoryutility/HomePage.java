@@ -44,6 +44,19 @@ public class HomePage {
 
 	@FindBy(linkText = "Sign Out")
 	private WebElement signOutlnk;
+	@FindBy(linkText = "Opportunities")
+	private WebElement opportunitiesLink;
+	@FindBy(xpath = "//a[contains(text(),'Home')]")
+	private WebElement homeLink;
+	
+
+	public WebElement getHomeLink() {
+		return homeLink;
+	}
+
+	public WebElement getOpportunitiesLink() {
+		return opportunitiesLink;
+	}
 
 	public WebElement getOrgLink() {
 		return orgLink;
