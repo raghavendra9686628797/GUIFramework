@@ -213,11 +213,11 @@ public class WebDriverUtility {
 	/**
 	 * select the value from the dropDown based on visible text
 	 * 
-	 * @param element
+	 * @param webElement
 	 * @param text
 	 */
-	public void select(WebElement element, String text) {
-		Select sel = new Select(element);
+	public void select(WebElement webElement, String text) {
+		Select sel = new Select(webElement);
 		sel.selectByVisibleText(text);
 	}
 
