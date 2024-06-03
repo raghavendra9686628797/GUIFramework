@@ -43,4 +43,9 @@ public class VendorsPage {
 	@FindBy(xpath="//input[contains(@value,\"Search Now\")]")
 	private WebElement searchNowBtn;
 
+
+
+
+	
+
 }

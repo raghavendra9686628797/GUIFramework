@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.comcast.crm.generic.webdriverutility.JavaUtility;
+import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
+
 public class CreatingNewOrganizationPage {
 	WebDriver driver;
 
@@ -14,6 +17,10 @@ public class CreatingNewOrganizationPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(xpath="//span[text()='Creating New Organization']")
+	private WebElement CreatingNewOrganizationText;
+	
 	@FindBy(name="accountname")
 	private WebElement OrgNameEdt;
 	
@@ -28,6 +35,10 @@ public class CreatingNewOrganizationPage {
 	
 	@FindAll({@FindBy(id="phone"),@FindBy(name="phone")})
 	private WebElement phoneEdt;
+
+	public WebElement getCreatingNewOrganizationText() {
+		return CreatingNewOrganizationText;
+	}
 
 	public WebElement getPhoneEdt() {
 		return phoneEdt;
@@ -58,4 +69,7 @@ public class CreatingNewOrganizationPage {
 		sel.selectByValue(industry);
 		saveBtn.click();
 	}
+	
+	
+	
 }
