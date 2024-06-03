@@ -9,6 +9,7 @@ import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -53,6 +54,17 @@ public class WebDriverUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
 
+	}
+	
+	/**
+	 * Wait for element to be Clickable
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void waitUntillElementClickable(WebDriver driver, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
 	/**
@@ -373,5 +385,21 @@ public class WebDriverUtility {
 		}
 		return isDisplayedOrNot;
 	}
+	
+	public JavascriptExecutor javaScriptExecutorActions(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		return js;
+	}
+	/**
+	 * Scroll till element is visible
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void scrollUntilElementIsVisible(WebDriver driver, WebElement element) {
+		javaScriptExecutorActions(driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	
 
 }
