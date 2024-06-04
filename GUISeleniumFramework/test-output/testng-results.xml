@@ -1,131 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
-=======
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2024-06-03T12:09:08Z" name="Default suite" finished-at="2024-06-03T12:09:39Z" duration-ms="30659">
-=======
-  <suite started-at="2024-06-03T09:49:51Z" name="Default suite" finished-at="2024-06-03T09:50:11Z" duration-ms="20048">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+  <suite started-at="2024-06-04T04:50:31Z" name="Default suite" finished-at="2024-06-04T04:51:30Z" duration-ms="59387">
     <groups>
-<<<<<<< HEAD
-=======
-      <group name="regressionTest">
-        <method signature="OpportunityTest.Create_opportunity_with_ContactTest()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" name="Create_opportunity_with_ContactTest" class="com.comcast.crm.oppotunityTest.OpportunityTest"/>
-      </group> <!-- regressionTest -->
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
     </groups>
-<<<<<<< HEAD
-    <test started-at="2024-06-03T12:09:08Z" name="Default test" finished-at="2024-06-03T12:09:39Z" duration-ms="30659">
-      <class name="com.comcast.crm.campaigns.CreateCampaignWithProduct">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.campaigns.CreateCampaignWithProduct@72437d8d]" started-at="2024-06-03T12:09:08Z" name="configBS" finished-at="2024-06-03T12:09:08Z" duration-ms="82" status="PASS">
-=======
-    <test started-at="2024-06-03T09:49:51Z" name="Default test" finished-at="2024-06-03T09:50:11Z" duration-ms="20048">
-      <class name="com.comcast.crm.oppotunityTest.OpportunityTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" started-at="2024-06-03T09:49:51Z" name="configBS" finished-at="2024-06-03T09:49:51Z" duration-ms="41" status="PASS">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+    <test started-at="2024-06-04T04:50:31Z" name="Default test" finished-at="2024-06-04T04:51:30Z" duration-ms="59387">
+      <class name="com.comcast.crm.campaigns.Advance_Search">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.campaigns.Advance_Search@6d025197]" started-at="2024-06-04T04:50:31Z" name="configBS" finished-at="2024-06-04T04:50:31Z" duration-ms="175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.campaigns.CreateCampaignWithProduct@72437d8d]" started-at="2024-06-03T12:09:08Z" name="configBC" finished-at="2024-06-03T12:09:12Z" duration-ms="3767" status="PASS">
-=======
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" started-at="2024-06-03T09:49:51Z" name="configBC" finished-at="2024-06-03T09:49:54Z" duration-ms="3077" status="PASS">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.campaigns.Advance_Search@6d025197]" started-at="2024-06-04T04:50:31Z" name="configBC" finished-at="2024-06-04T04:50:40Z" duration-ms="8810" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.campaigns.CreateCampaignWithProduct@72437d8d]" started-at="2024-06-03T12:09:12Z" name="configBM" finished-at="2024-06-03T12:09:17Z" duration-ms="4859" status="PASS">
-=======
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" started-at="2024-06-03T09:49:54Z" name="configBM" finished-at="2024-06-03T09:49:58Z" duration-ms="4332" status="PASS">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.campaigns.Advance_Search@6d025197]" started-at="2024-06-04T04:50:40Z" name="configBM" finished-at="2024-06-04T04:51:00Z" duration-ms="20520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-<<<<<<< HEAD
-        <test-method signature="campaignWithProduct()[pri:0, instance:com.comcast.crm.campaigns.CreateCampaignWithProduct@72437d8d]" started-at="2024-06-03T12:09:17Z" name="campaignWithProduct" finished-at="2024-06-03T12:09:37Z" duration-ms="19746" status="PASS">
-=======
-        <test-method signature="Create_opportunity_with_ContactTest()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" started-at="2024-06-03T09:49:58Z" name="Create_opportunity_with_ContactTest" finished-at="2024-06-03T09:50:08Z" duration-ms="10002" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.comcast.crm.oppotunityTest.OpportunityTest.Create_opportunity_with_ContactTest(OpportunityTest.java:57)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+        <test-method signature="searchWithNameContainsInCampaignName()[pri:0, instance:com.comcast.crm.campaigns.Advance_Search@6d025197]" started-at="2024-06-04T04:51:00Z" name="searchWithNameContainsInCampaignName" finished-at="2024-06-04T04:51:23Z" duration-ms="22608" status="PASS">
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- campaignWithProduct -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.campaigns.CreateCampaignWithProduct@72437d8d]" started-at="2024-06-03T12:09:37Z" name="configAM" finished-at="2024-06-03T12:09:38Z" duration-ms="1676" status="PASS">
-=======
-        </test-method> <!-- Create_opportunity_with_ContactTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" started-at="2024-06-03T09:50:08Z" name="configAM" finished-at="2024-06-03T09:50:10Z" duration-ms="1319" status="PASS">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+        </test-method> <!-- searchWithNameContainsInCampaignName -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.campaigns.Advance_Search@6d025197]" started-at="2024-06-04T04:51:23Z" name="configAM" finished-at="2024-06-04T04:51:29Z" duration-ms="5999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.campaigns.CreateCampaignWithProduct@72437d8d]" started-at="2024-06-03T12:09:38Z" name="configAC" finished-at="2024-06-03T12:09:39Z" duration-ms="568" status="PASS">
-=======
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" started-at="2024-06-03T09:50:10Z" name="configAC" finished-at="2024-06-03T09:50:11Z" duration-ms="1290" status="PASS">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.campaigns.Advance_Search@6d025197]" started-at="2024-06-04T04:51:29Z" name="configAC" finished-at="2024-06-04T04:51:30Z" duration-ms="1363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.campaigns.CreateCampaignWithProduct@72437d8d]" started-at="2024-06-03T12:09:39Z" name="configAS" finished-at="2024-06-03T12:09:39Z" duration-ms="0" status="PASS">
-=======
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@49c90a9c]" started-at="2024-06-03T09:50:11Z" name="configAS" finished-at="2024-06-03T09:50:11Z" duration-ms="0" status="PASS">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.campaigns.Advance_Search@6d025197]" started-at="2024-06-04T04:51:30Z" name="configAS" finished-at="2024-06-04T04:51:30Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-<<<<<<< HEAD
-      </class> <!-- com.comcast.crm.campaigns.CreateCampaignWithProduct -->
-=======
-      </class> <!-- com.comcast.crm.oppotunityTest.OpportunityTest -->
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+      </class> <!-- com.comcast.crm.campaigns.Advance_Search -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
