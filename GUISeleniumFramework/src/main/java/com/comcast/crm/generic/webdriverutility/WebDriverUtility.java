@@ -401,10 +401,7 @@ public class WebDriverUtility {
 		}
 		return isDisplayedOrNot;
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 	/**
 	 * @author Magendran
 	 * Single Click on the Element
@@ -428,15 +425,6 @@ public class WebDriverUtility {
 	
 	public void scrollTillElement(WebDriver driver,WebElement ELement) {
 	
-<<<<<<< HEAD
-		 JavascriptExecutor js = (JavascriptExecutor) driver;
-		  js.executeScript("arguments[0].scrollIntoView(true);", ELement);
-	}
-
-	
-	public JavascriptExecutor javaScriptExecutorActions(WebDriver driver) {
-=======
->>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		 js.executeScript("arguments[0].scrollIntoView(true);", ELement);
 	}
@@ -455,10 +443,6 @@ public class WebDriverUtility {
 	
 
 	
-<<<<<<< HEAD
-	        // Scroll to the element using JavaScript
-	      
-=======
 
 
 	       
@@ -467,7 +451,6 @@ public class WebDriverUtility {
 		return null;
 	}
 
->>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 	/**
 	 * 
 	 * @author Magendran
