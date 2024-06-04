@@ -49,9 +49,9 @@ public class createFilterTest  extends BaseClass{
 		utility.select(cfp.billingAddress, 6);
 		cfp.saveButton.click();
 		String generatedName=cfp.createdName.getText();
-		utility.waitForElementPresent(driver, cfp.createdName);
+		boolean flag=generatedName.contains(viewName);
 		Thread.sleep(1000);
-		Assert.assertTrue(true, generatedName);
+		Assert.assertEquals(flag, true);
 		
 		
 	}
