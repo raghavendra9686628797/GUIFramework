@@ -2,13 +2,18 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -38,8 +43,12 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2024-06-04T09:44:31Z" name="Default suite" finished-at="2024-06-04T09:44:56Z" duration-ms="24872">
+=======
 <<<<<<< HEAD
   <suite started-at="2024-06-04T09:20:25Z" name="Default suite" finished-at="2024-06-04T09:20:58Z" duration-ms="33128">
 =======
@@ -73,7 +82,10 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
     <groups>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       <group name="regessionTest">
         <method signature="createAContactInMoreInfoTest.creata_A_Contact()[pri:0, instance:com.comcast.crm.organizationtest.createAContactInMoreInfoTest@5a7fe64f]" name="creata_A_Contact" class="com.comcast.crm.organizationtest.createAContactInMoreInfoTest"/>
@@ -107,7 +119,11 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
     </groups>
+<<<<<<< HEAD
+    <test started-at="2024-06-04T09:44:31Z" name="Default test" finished-at="2024-06-04T09:44:56Z" duration-ms="24872">
+=======
 <<<<<<< HEAD
     <test started-at="2024-06-04T09:20:25Z" name="Default test" finished-at="2024-06-04T09:20:58Z" duration-ms="33128">
 =======
@@ -121,7 +137,11 @@
 =======
 <<<<<<< HEAD
     <test started-at="2024-06-04T07:28:22Z" name="Default test" finished-at="2024-06-04T07:28:32Z" duration-ms="10256">
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
       <class name="com.comcast.crm.quotestest.createFilterTest">
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T09:44:31Z" name="configBS" finished-at="2024-06-04T09:44:31Z" duration-ms="54" status="PASS">
+=======
         <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:22Z" name="configBS" finished-at="2024-06-04T07:28:22Z" duration-ms="27" status="PASS">
 =======
 <<<<<<< HEAD
@@ -163,9 +183,13 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T09:44:31Z" name="configBC" finished-at="2024-06-04T09:44:34Z" duration-ms="2913" status="PASS">
+=======
 <<<<<<< HEAD
         <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.organizationtest.createAContactInMoreInfoTest@5a7fe64f]" started-at="2024-06-04T09:20:25Z" name="configBC" finished-at="2024-06-04T09:20:28Z" duration-ms="2529" status="PASS">
 =======
@@ -199,9 +223,13 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T09:44:34Z" name="configBM" finished-at="2024-06-04T09:44:40Z" duration-ms="5319" status="PASS">
+=======
 <<<<<<< HEAD
         <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.organizationtest.createAContactInMoreInfoTest@5a7fe64f]" started-at="2024-06-04T09:20:28Z" name="configBM" finished-at="2024-06-04T09:20:33Z" duration-ms="5299" status="PASS">
 =======
@@ -235,9 +263,13 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
+<<<<<<< HEAD
+        <test-method signature="createFilter()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T09:44:40Z" name="createFilter" finished-at="2024-06-04T09:44:53Z" duration-ms="13757" status="PASS">
+=======
 <<<<<<< HEAD
         <test-method signature="creata_A_Contact()[pri:0, instance:com.comcast.crm.organizationtest.createAContactInMoreInfoTest@5a7fe64f]" started-at="2024-06-04T09:20:33Z" name="creata_A_Contact" finished-at="2024-06-04T09:20:57Z" duration-ms="23699" status="PASS">
 =======
@@ -316,8 +348,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -329,7 +364,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.campaigns.AddcontactToCampaign@72437d8d]" started-at="2024-06-04T07:27:05Z" name="configAM" finished-at="2024-06-04T07:27:13Z" duration-ms="8612" status="PASS">
 =======
 <<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
         </test-method> <!-- createFilter -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T09:44:53Z" name="configAM" finished-at="2024-06-04T09:44:56Z" duration-ms="2433" status="PASS">
+=======
         <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:31Z" name="configAM" finished-at="2024-06-04T07:28:32Z" duration-ms="923" status="PASS">
 =======
 <<<<<<< HEAD
@@ -362,9 +401,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T09:44:56Z" name="configAC" finished-at="2024-06-04T09:44:56Z" duration-ms="412" status="PASS">
+=======
 <<<<<<< HEAD
         <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.organizationtest.createAContactInMoreInfoTest@5a7fe64f]" started-at="2024-06-04T09:20:58Z" name="configAC" finished-at="2024-06-04T09:20:58Z" duration-ms="139" status="PASS">
 =======
@@ -585,9 +628,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T09:44:56Z" name="configAS" finished-at="2024-06-04T09:44:56Z" duration-ms="1" status="PASS">
+=======
 <<<<<<< HEAD
         <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.organizationtest.createAContactInMoreInfoTest@5a7fe64f]" started-at="2024-06-04T09:20:58Z" name="configAS" finished-at="2024-06-04T09:20:58Z" duration-ms="0" status="PASS">
 =======
@@ -621,6 +668,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
@@ -629,10 +677,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       </class> <!-- com.comcast.crm.campaigns.AddcontactToCampaign -->
 =======
 <<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
       </class> <!-- com.comcast.crm.quotestest.createFilterTest -->
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
       </class> <!-- com.comcast.crm.campaigns.Advance_Search -->
@@ -661,6 +714,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

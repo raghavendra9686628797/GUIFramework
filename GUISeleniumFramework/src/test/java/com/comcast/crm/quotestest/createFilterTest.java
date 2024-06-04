@@ -34,7 +34,7 @@ public class createFilterTest  extends BaseClass{
 		Assert.assertEquals(quotesText, quotesPage);
 		createFilterPage cfp=new createFilterPage(driver);
 		cfp.createFilter.click();
-		String pageName=fetch.getDataFromExcel("Quotes", 19, 4);
+		String pageName=fetch.getDataFromExcel("Quotes", 19, 3);
 		String navigatingName=	cfp.headerText.getText();
 		
 		Assert.assertEquals(pageName, navigatingName);
@@ -49,11 +49,11 @@ public class createFilterTest  extends BaseClass{
 		utility.select(cfp.billingAddress, 6);
 		cfp.saveButton.click();
 		String generatedName=cfp.createdName.getText();
-		boolean flag=generatedName.contains(viewName);
+		System.out.println(generatedName);
+		boolean flag=generatedName.contains(name);
+		utility.waitForPageToLoad(driver);
 		Thread.sleep(1000);
 		Assert.assertEquals(flag, true);
-		
-		
 	}
 
 }

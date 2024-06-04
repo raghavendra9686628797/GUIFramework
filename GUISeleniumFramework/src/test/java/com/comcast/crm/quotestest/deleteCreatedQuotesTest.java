@@ -38,10 +38,12 @@ static	String   subjectName =null;;
 			String quantity=fetch.getDataFromExcel("Quotes", 4,7 );
 			String date=fetch.getDataFromExcel("Quotes", 4, 8);
 			String fetchHomeText=fetch.getDataFromExcel("Quotes", 1, 2);
-			String pageVerification=utility.pageVerification(qp.headerMessage);
+		//	String pageVerification=utility.pageVerification(qp.headerText);
+		
+			String pageVerification1=utility.pageVerification(qp.headerMessage);
 			
 			//page verification
-			Assert.assertEquals(fetchHomeText, pageVerification);
+			Assert.assertEquals(fetchHomeText, pageVerification1);
 		
 			utility.mousemoveOnElement(driver, qp.moreOption);
 			
