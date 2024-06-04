@@ -16,7 +16,7 @@ public class NavigateTOQuotesTest extends BaseClass{
 		WebDriverUtility utility=new WebDriverUtility();
 		ExcelUtility fetch=new ExcelUtility();
 		String fetchHomeText=fetch.getDataFromExcel("Quotes", 1, 2);
-		String pageVerification=utility.pageVerification(qp.headerText);
+		String pageVerification=utility.pageVerification(qp.headerMessage);
 		
 		//page verification
 		Assert.assertEquals(fetchHomeText, pageVerification);
@@ -27,7 +27,7 @@ public class NavigateTOQuotesTest extends BaseClass{
 		utility.singleClick(qp.Quotes);
 		String quotesText=fetch.getDataFromExcel("Quotes", 1, 3);
 
-		String quotesPage=utility.pageVerification(qp.headerText);
+		String quotesPage=utility.pageVerification(qp.headerMessage);
 		//page verification
 		Assert.assertEquals(quotesText, quotesPage);
 	}

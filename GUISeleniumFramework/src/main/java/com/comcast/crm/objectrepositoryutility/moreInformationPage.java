@@ -28,8 +28,14 @@ public class moreInformationPage {
 	@FindBy(xpath="//img[@id=\"show_Accounts_Contacts\"]")
 	private WebElement contactsTab;
 	
+	@FindBy(xpath="//img[@id=\"show_Accounts_Quotes\"]")
+	private WebElement quotesTab;
+	
 	@FindBy(xpath = "//input[@value=\"Add Contact\"]")
 	private WebElement addcontactButton;
+	
+	@FindBy(xpath = "//input[@title=\"Add Quote\"]")
+	private WebElement addQuoteButton;
 	
 
 
@@ -45,7 +51,15 @@ public class moreInformationPage {
 		return contactsTab;
 	}
 	
+	public WebElement getquotesTab() {
+		return quotesTab;
+	}
+	
 	public WebElement getaddcontactButton() {
 		return addcontactButton;
+	}
+	
+	public WebElement getaddQuoteButton() {
+		return addQuoteButton;
 	}
 }
