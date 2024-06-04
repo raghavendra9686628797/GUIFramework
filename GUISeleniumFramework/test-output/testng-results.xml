@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-04T07:16:54Z" name="Default suite" finished-at="2024-06-04T07:17:04Z" duration-ms="10250">
+  <suite started-at="2024-06-04T07:28:22Z" name="Default suite" finished-at="2024-06-04T07:28:32Z" duration-ms="10256">
     <groups>
     </groups>
-    <test started-at="2024-06-04T07:16:54Z" name="Default test" finished-at="2024-06-04T07:17:04Z" duration-ms="10250">
+    <test started-at="2024-06-04T07:28:22Z" name="Default test" finished-at="2024-06-04T07:28:32Z" duration-ms="10256">
       <class name="com.comcast.crm.quotestest.createFilterTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:16:54Z" name="configBS" finished-at="2024-06-04T07:16:54Z" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:22Z" name="configBS" finished-at="2024-06-04T07:28:22Z" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:16:54Z" name="configBC" finished-at="2024-06-04T07:16:56Z" duration-ms="1471" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:22Z" name="configBC" finished-at="2024-06-04T07:28:23Z" duration-ms="1399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:16:56Z" name="configBM" finished-at="2024-06-04T07:16:58Z" duration-ms="2108" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:23Z" name="configBM" finished-at="2024-06-04T07:28:25Z" duration-ms="2234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createFilter()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:16:58Z" name="createFilter" finished-at="2024-06-04T07:17:03Z" duration-ms="5430" status="PASS">
+        <test-method signature="createFilter()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:25Z" name="createFilter" finished-at="2024-06-04T07:28:31Z" duration-ms="5533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createFilter -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:17:03Z" name="configAM" finished-at="2024-06-04T07:17:04Z" duration-ms="1046" status="PASS">
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:31Z" name="configAM" finished-at="2024-06-04T07:28:32Z" duration-ms="923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:17:04Z" name="configAC" finished-at="2024-06-04T07:17:04Z" duration-ms="179" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:32Z" name="configAC" finished-at="2024-06-04T07:28:32Z" duration-ms="150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:17:05Z" name="configAS" finished-at="2024-06-04T07:17:05Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.quotestest.createFilterTest@49c90a9c]" started-at="2024-06-04T07:28:32Z" name="configAS" finished-at="2024-06-04T07:28:32Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
