@@ -21,5 +21,23 @@ public class OpportunityInformationPage {
 	public WebElement getCreateInvoiceLink() {
 		return createInvoiceLink;
 	}
+	@FindBy(id="dtlview_Opportunity Name")
+	private WebElement opportunityNameTxt;
+	
+	@FindBy(xpath="//a[@title=\"Organizations\"]")
+	private WebElement organizationLnk;
+	
+	@FindBy(xpath="//td[.=\"Expected Close Date\"]/following-sibling::td")
+	private WebElement expectedCloseDateTxt;
+	
+	public WebElement getOpportunityNameTxt() {
+		return opportunityNameTxt;
+	}
+	public WebElement getOrganizationLnk() {
+		return organizationLnk;
+	}
+	public WebElement getExpectedCloseDateTxt() {
+		return expectedCloseDateTxt;
+	}
 	
 }
