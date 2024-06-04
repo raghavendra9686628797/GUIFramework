@@ -61,7 +61,7 @@ public class QuotesPage {
 	
 
 	public WebElement getsearchIcon1() {
-		return shippingAddressTextarea;
+		return searchIcon;
 	}
 	
 	public WebElement getsearchBasicModeTexfield() {

@@ -15,7 +15,7 @@ import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 
 public class addNoteTest extends BaseClass {
 
-	@Test
+	@Test(groups = "regessionTest")
 	public void  user_is_able_to_add_a_note() throws Throwable
 	{
 		WebDriverUtility wd = new WebDriverUtility();

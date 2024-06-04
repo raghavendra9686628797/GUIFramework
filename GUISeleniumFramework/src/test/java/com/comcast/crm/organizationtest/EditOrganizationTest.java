@@ -14,7 +14,7 @@ import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 
 public class EditOrganizationTest extends BaseClass {
 
-	@Test
+	@Test(groups = "smokeTest")
 	public void user_is_able_to_edit_the_organization() throws Throwable {
 		WebDriverUtility wd = new WebDriverUtility();
 		wd.waitForPageToLoad(driver);
@@ -66,8 +66,9 @@ public class EditOrganizationTest extends BaseClass {
 		wd.waitForElementPresent(driver, op.getorganizationText());
 
 		String organizationsTextPage = op.getorganizationText().getText();
-		System.out.println(organizationsTextPage);
+		
 		Assert.assertEquals(OrganizationText, organizationsTextPage);
+		System.out.println(organizationsTextPage);
 
 		/**
 		 * editing the organization
@@ -79,15 +80,16 @@ public class EditOrganizationTest extends BaseClass {
 
 		wd.select(newOrgPage.getIndustryDD(), editedIndustryText);
 		newOrgPage.getSaveBtn().click();
+		System.out.println("clicked on save button ");
 
 		Thread.sleep(5000);
 		/**
 		 * validating the changes
 		 */
-		driver.findElement(By.xpath("//a[text()='" + orgName + "']")).click();
+		driver.findElement(By.linkText(orgName)).click();
 		String industryText = oip.getIndustryText().getText();
 		Assert.assertNotEquals(industryText, IndustryValue);
-		System.out.println("end");
+		
 
 	}
 }

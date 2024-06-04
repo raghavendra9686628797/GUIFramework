@@ -1,5 +1,6 @@
 package com.comcast.crm.organizationtest;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +14,7 @@ import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 
 public class createOrganization  extends BaseClass {
 
-	@Test
+	@Test(groups = "smokeTest")
 	public void  user_is_able_to_create_a_Organization() throws Throwable
 	{
 		WebDriverUtility wd = new WebDriverUtility();
@@ -52,6 +53,8 @@ public class createOrganization  extends BaseClass {
 		
 		boolean getBoolean = TosterMessage.contains(OrganizationInformationText);
 		Assert.assertTrue(getBoolean);
+		hp.getOrgLink().click();
+		driver.findElement(By.linkText(orgName)).isDisplayed();
 
 }
 }

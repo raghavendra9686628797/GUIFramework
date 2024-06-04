@@ -16,7 +16,7 @@ import com.comcast.crm.objectrepositoryutility.moreInformationPage;
 
 public class createAContactInMoreInfoTest extends BaseClass {
 
-	@Test
+	@Test(groups = "regessionTest")
 
 	public void creata_A_Contact() throws Throwable {
 		WebDriverUtility wd = new WebDriverUtility();

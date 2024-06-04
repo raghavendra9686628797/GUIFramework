@@ -13,15 +13,24 @@ import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OrganizationInformationPage;
 import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 import com.comcast.crm.objectrepositoryutility.ProductsPage;
+import com.comcast.crm.objectrepositoryutility.QuotesPage;
 import com.comcast.crm.objectrepositoryutility.moreInformationPage;
 
 public class createAQuoteWithContactName extends BaseClass {
 	
-	@Test
+	@Test(groups = "regessionTest")
 	public void  user_is_able_to_add_a_note() throws Throwable
 	{
 
 		HomePage hp=new HomePage(driver);
+		
+
+		/**
+		 * generating random number
+		 */
+		
+		JavaUtility ju = new JavaUtility();
+		int num = ju.getRandomNumber();
 		
 		/* Create New Product*/
 		
@@ -30,7 +39,7 @@ public class createAQuoteWithContactName extends BaseClass {
 		pp.getCreateProductImg().click();
 
 		CreateNewProductPage cnp=new CreateNewProductPage(driver);
-		String productName= eLib.getDataFromExcel("Organizations",13,2);
+		String productName= eLib.getDataFromExcel("Organizations",13,2)+num;
 		cnp.getProductnameEdt().sendKeys(productName);
 		cnp.getSaveBtn().click();
 		
@@ -47,12 +56,6 @@ public class createAQuoteWithContactName extends BaseClass {
 		String createNewOrgPage = newOrgPage.getCreatingNewOrganizationText().getText();
 		Assert.assertEquals(createOrgText, createNewOrgPage);
 		
-		/**
-		 * generating random number
-		 */
-		
-		JavaUtility ju = new JavaUtility();
-		int num = ju.getRandomNumber();
 		
 		String orgName = eLib.getDataFromExcel("Organizations", 13, 4) + num;
 		
@@ -104,6 +107,57 @@ public class createAQuoteWithContactName extends BaseClass {
 		String contactName = eLib.getDataFromExcel("Organizations", 13, 8) + num;
 		cip.createContact(contactName);
 		driver.findElement(By.xpath("//tr[@bgcolor=\"white\"]//td//a[text()='" + contactName + "']")).isDisplayed();
+		
+		/**
+		 * navigating to quote page and validation
+		 */
+		
+		QuotesPage qp = new QuotesPage(driver);
+		mip.getquotesTab().click();
+		mip.getaddQuoteButton().isDisplayed();
+		String quoteText = eLib.getDataFromExcel("Organizations", 13, 9);
+		mip.getaddQuoteButton().click();
+		String creatingNewQuoteText = qp.getheaderMessage().getText();
+		Assert.assertEquals(creatingNewQuoteText, quoteText);
+		
+		/**
+		 * creating quote
+		 */
+		
+		String subjectName = eLib.getDataFromExcel("Organizations", 13, 10);
+		qp.getsubjectTextfield().sendKeys(subjectName);
+		
+		String billingAddress = eLib.getDataFromExcel("Organizations", 13, 11);
+		qp.getbillingAddressTextarea().sendKeys(billingAddress);
+		
+		String shippingAddress = eLib.getDataFromExcel("Organizations", 13, 12);
+		qp.getshippingAddressTextarea().sendKeys(shippingAddress);
+		
+		wLib.scrollUntilElementIsVisible(driver, qp.getsearchIcon1());
+		System.out.println("failed to scroll");
+		
+		String QTY = eLib.getDataFromExcel("Organizations", 13, 13);
+		qp.getqtyTextfiled().sendKeys(QTY);
+		
+		qp.getsearchIcon1().click();
+		
+		/**
+		 * switching the window to child 
+		 */
+		
+		wLib.switchToTabOnURL(driver, "module=Products&action");
+		qp.getsearchBasicModeTexfield().sendKeys(productName);
+		qp.getsearchNowButton().click();
+		driver.findElement(By.linkText(productName)).click();
+		
+		/* switching window back to parent window */
+		
+		
+		wLib.switchToTabOnURL(driver,"index.php");
+		newOrgPage.getSaveBtn().click();
+		driver.findElement(By.xpath("//a[text()='"+subjectName+"']")).isDisplayed();
+		
+		
 		
 		
 
