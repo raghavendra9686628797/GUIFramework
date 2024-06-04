@@ -26,7 +26,7 @@ public class createQuotesTest extends BaseClass {
 		String quantity=fetch.getDataFromExcel("Quotes", 4,7 );
 		String date=fetch.getDataFromExcel("Quotes", 4, 8);
 		String fetchHomeText=fetch.getDataFromExcel("Quotes", 1, 2);
-		String pageVerification=utility.pageVerification(qp.headerText);
+		String pageVerification=utility.pageVerification(qp.headerMessage);
 		
 		//page verification
 		Assert.assertEquals(fetchHomeText, pageVerification);
@@ -37,7 +37,7 @@ public class createQuotesTest extends BaseClass {
 		utility.singleClick(qp.Quotes);
 		String quotesText=fetch.getDataFromExcel("Quotes", 1, 3);
 
-		String quotesPage=utility.pageVerification(qp.headerText);
+		String quotesPage=utility.pageVerification(qp.headerMessage);
 		
 		//page verification
 		Assert.assertEquals(quotesText, quotesPage);
@@ -91,11 +91,6 @@ public class createQuotesTest extends BaseClass {
 		utility.waitForPageToLoad(driver);
 		String savedName=utility.pageVerification(cop.createdText);
 		Assert.assertTrue(true, savedName);
-}
-@Test(dependsOnMethods = "createQuotesPage")
-public void deleteQuotes() {
-	
-	
 }
 
 }
