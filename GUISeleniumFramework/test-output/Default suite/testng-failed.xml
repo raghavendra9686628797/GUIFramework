@@ -3,63 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.comcast.crm.producttest.CreateProductTest">
-=======
-<<<<<<< HEAD
-      <class name="com.comcast.crm.organizationtest.createAContactInMoreInfoTest">
-=======
-<<<<<<< HEAD
-      <class name="com.comcast.crm.campaigns.CreateCampaignWithProduct">
-=======
-      <class name="com.comcast.crm.oppotunityTest.OpportunityTest">
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
->>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
->>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
+      <class name="com.comcast.crm.leadtest.E2ELeadTest">
         <methods>
-          <include name="Create_Product_With_Mandatory_Fields"/>
           <include name="configBM"/>
-<<<<<<< HEAD
-          <include name="Add_Organization_To_ExistedProduct"/>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-          <include name="Create_opportunity_with_ContactTest"/>
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
->>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
->>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
           <include name="configAM"/>
-<<<<<<< HEAD
-          <include name="Create_Product_With_ProductCategory"/>
-=======
-<<<<<<< HEAD
-          <include name="creata_A_Contact"/>
-=======
-          <include name="campaignWithProduct"/>
->>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
->>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
           <include name="configBS"/>
           <include name="configBC"/>
-          <include name="create_Product_With_VendorName"/>
-          <include name="Delete_the_product"/>
           <include name="configAS"/>
           <include name="configAC"/>
+          <include name="convert_Lead_To_Opportunity"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.comcast.crm.producttest.CreateProductTest -->
-=======
-<<<<<<< HEAD
-      </class> <!-- com.comcast.crm.organizationtest.createAContactInMoreInfoTest -->
-=======
-<<<<<<< HEAD
-      </class> <!-- com.comcast.crm.campaigns.CreateCampaignWithProduct -->
-=======
-      </class> <!-- com.comcast.crm.oppotunityTest.OpportunityTest -->
->>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
->>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
->>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
+      </class> <!-- com.comcast.crm.leadtest.E2ELeadTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
