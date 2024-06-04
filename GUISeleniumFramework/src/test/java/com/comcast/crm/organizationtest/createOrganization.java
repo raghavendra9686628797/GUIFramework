@@ -20,7 +20,7 @@ public class createOrganization  extends BaseClass {
 		wd.waitForPageToLoad(driver);
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
-		String createOrgText = eLib.getDataFromExcel("Organizations", 10, 1);
+		String createOrgText = eLib.getDataFromExcel("Organizations", 4, 2);
 		
 		OrganizationsPage op = new OrganizationsPage(driver);
 		op.getCreateNewOrgBtn().click();
@@ -36,14 +36,14 @@ public class createOrganization  extends BaseClass {
 		JavaUtility ju = new JavaUtility();
 		int num = ju.getRandomNumber();
 		
-		String orgName = eLib.getDataFromExcel("Organizations", 10, 2) + num;
+		String orgName = eLib.getDataFromExcel("Organizations", 4, 3) + num;
 		
 		/** creating organization
 		 * 
 		 */
 		newOrgPage.createOrg(orgName);
 		Thread.sleep(3000);
-		String OrganizationInformationText = eLib.getDataFromExcel("Organizations", 10, 3);
+		String OrganizationInformationText = eLib.getDataFromExcel("Organizations", 4, 4);
 		System.out.println(OrganizationInformationText);
 		
 		OrganizationInformationPage oip = new OrganizationInformationPage(driver);
