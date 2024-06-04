@@ -51,7 +51,7 @@ public void searchWithNameContainsInCampaignName() throws Throwable {
 		title=pageheader.contains("Advanced");
 		Assert.assertEquals(title, true);
 		
-		//SELECT Campaign options
+		//SELECT Campai gn options
 	    String text=elib.getDataFromExcel("Campaigns", 10, 1);
 		aslib.getCampaignNameDropdown().click();
 		driver.findElement(By.xpath("//optgroup[@class=\"select\"]/option[text()='"+text+"']")).click();
