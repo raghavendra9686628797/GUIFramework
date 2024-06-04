@@ -15,14 +15,14 @@ import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 
 public class addNoteTest extends BaseClass {
 
-	@Test
+	@Test(groups = "regessionTest")
 	public void  user_is_able_to_add_a_note() throws Throwable
 	{
 		WebDriverUtility wd = new WebDriverUtility();
 		wd.waitForPageToLoad(driver);
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
-		String createOrgText = eLib.getDataFromExcel("Organizations", 7, 1);
+		String createOrgText = eLib.getDataFromExcel("Organizations", 10, 2);
 		
 		OrganizationsPage op = new OrganizationsPage(driver);
 		op.getCreateNewOrgBtn().click();
@@ -38,7 +38,7 @@ public class addNoteTest extends BaseClass {
 		JavaUtility ju = new JavaUtility();
 		int num = ju.getRandomNumber();
 		
-		String orgName = eLib.getDataFromExcel("Organizations", 7, 2) + num;
+		String orgName = eLib.getDataFromExcel("Organizations", 10, 3) + num;
 		
 		/** creating organization
 		 * 
@@ -46,12 +46,13 @@ public class addNoteTest extends BaseClass {
 		
 		newOrgPage.createOrg(orgName);
 		Thread.sleep(3000);
-		String OrganizationInformationText = eLib.getDataFromExcel("Organizations", 7, 3);
+		String OrganizationInformationText = eLib.getDataFromExcel("Organizations", 10, 4);
 		System.out.println(OrganizationInformationText);
 		
 		/**
 		 * validation
 		 */
+		
 		OrganizationInformationPage oip = new OrganizationInformationPage(driver);
 		String TosterMessage = oip.getHeaderMsg().getText();
 		boolean getBoolean = TosterMessage.contains(OrganizationInformationText);
@@ -60,14 +61,15 @@ public class addNoteTest extends BaseClass {
 		/**
 		 * navigating to documents page from organization page
 		 */
+		
 		oip.getaddNoteLink().click();
-		String doucumentsText = eLib.getDataFromExcel("Organizations", 7, 4);
+		String doucumentsText = eLib.getDataFromExcel("Organizations", 10, 5);
 			
 		DoucmentsPage dp = new DoucmentsPage(driver);
 		String documentHeaderMessage = dp.getheaderMsg().getText();
 		Assert.assertEquals(documentHeaderMessage, doucumentsText);
 		
-		String TitleName = eLib.getDataFromExcel("Organizations", 7, 5)+num;
+		String TitleName = eLib.getDataFromExcel("Organizations", 10, 6)+num;
 		dp.createDoucment(TitleName);
 		oip.getHeaderMsg().isDisplayed();
 		hp.getdocumentsLink().click();

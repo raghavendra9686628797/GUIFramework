@@ -16,14 +16,14 @@ import com.comcast.crm.objectrepositoryutility.moreInformationPage;
 
 public class createAContactInMoreInfoTest extends BaseClass {
 
-	@Test
+	@Test(groups = "regessionTest")
 
 	public void creata_A_Contact() throws Throwable {
 		WebDriverUtility wd = new WebDriverUtility();
 		wd.waitForPageToLoad(driver);
 		HomePage hp = new HomePage(driver);
 		hp.getOrgLink().click();
-		String createOrgText = eLib.getDataFromExcel("Organizations", 4, 1);
+		String createOrgText = eLib.getDataFromExcel("Organizations", 7, 2);
 
 		OrganizationsPage op = new OrganizationsPage(driver);
 		op.getCreateNewOrgBtn().click();
@@ -38,8 +38,8 @@ public class createAContactInMoreInfoTest extends BaseClass {
 
 		int num = jLib.getRandomNumber();
 
-		String orgName = eLib.getDataFromExcel("Organizations", 4, 2) + num;
-		String IndustryValue = eLib.getDataFromExcel("Organizations", 4, 3);
+		String orgName = eLib.getDataFromExcel("Organizations", 7, 3) + num;
+		String IndustryValue = eLib.getDataFromExcel("Organizations", 7, 4);
 
 		/**
 		 * creating organization with industry
@@ -55,9 +55,9 @@ public class createAContactInMoreInfoTest extends BaseClass {
 
 		oip.getmoreInformationLink().click();
 
-		String moreInfoText = eLib.getDataFromExcel("Organizations", 4, 5);
+		String moreInfoText = eLib.getDataFromExcel("Organizations", 7, 5);
 
-		System.out.println("---------");
+		
 
 		// wLib.mousemoveOnElement(driver,oip.getmoreInformationLink());
 
@@ -74,8 +74,9 @@ public class createAContactInMoreInfoTest extends BaseClass {
 		/**
 		 * creating contact from more info page
 		 */
+		
 		mip.getcontactsTab().isDisplayed();
-		String contactText = eLib.getDataFromExcel("Organizations", 4, 6);
+		String contactText = eLib.getDataFromExcel("Organizations", 7, 6);
 		mip.getcontactsTab().click();
 		mip.getaddcontactButton().click();
 
@@ -83,7 +84,7 @@ public class createAContactInMoreInfoTest extends BaseClass {
 		String creatingNewContactText = cip.getHeaderTxt().getText();
 		Assert.assertEquals(creatingNewContactText, contactText);
 
-		String contactName = eLib.getDataFromExcel("Organizations", 4, 7) + num;
+		String contactName = eLib.getDataFromExcel("Organizations", 7, 7) + num;
 		cip.createContact(contactName);
 		driver.findElement(By.xpath("//tr[@bgcolor=\"white\"]//td//a[text()='" + contactName + "']")).isDisplayed();
 	}
