@@ -23,7 +23,11 @@ public class OpportunityInformationPage {
 	}
 	@FindBy(id="dtlview_Opportunity Name")
 	private WebElement opportunityNameTxt;
+	@FindBy(xpath = "//a[text()='More Information']") private WebElement MoreInfoLink;
 	
+	public WebElement getMoreInfoLink() {
+		return MoreInfoLink;
+	}
 	@FindBy(xpath="//a[@title=\"Organizations\"]")
 	private WebElement organizationLnk;
 	
@@ -38,6 +42,11 @@ public class OpportunityInformationPage {
 	}
 	public WebElement getExpectedCloseDateTxt() {
 		return expectedCloseDateTxt;
+	}
+	@FindBy(xpath = "//div[@id=\"More_Information_Modules_List\"]//a[text()='Documents']")
+	private WebElement documentLink;
+	public WebElement getDocumentLink() {
+		return documentLink;
 	}
 	
 }

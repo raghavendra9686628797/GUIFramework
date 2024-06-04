@@ -10,8 +10,10 @@ import com.comcast.crm.generic.fileutility.ExcelUtility;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositoryutility.CreateNewInvoicePage;
 import com.comcast.crm.objectrepositoryutility.CreateNewOpportunityPage;
+import com.comcast.crm.objectrepositoryutility.DoucmentsPage;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OpportunityInformationPage;
+import com.comcast.crm.objectrepositoryutility.OpportunityMoreInfoPage;
 import com.comcast.crm.objectrepositoryutility.OpportunityPage;
 import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 import com.comcast.crm.objectrepositoryutility.ProductsPage;
@@ -81,7 +83,7 @@ public void Create_Invoice_For_OpportunityTest() throws Throwable {
 	OpportunityInformationPage oip = new OpportunityInformationPage(driver);
 	CreateNewInvoicePage cnip = new CreateNewInvoicePage(driver);
 	OrganizationsPage orp= new OrganizationsPage(driver);
-
+	
 	/* Navigate to HomePage and verify*/
 	boolean flag = wlib.verifyElementDisplayedOrNot(driver, hp.getHomeLink());
 	Assert.assertEquals(true, flag);
@@ -171,7 +173,8 @@ public void Add_Document_to_OpportunityTest() throws Throwable {
 	WebDriverUtility wlib = new WebDriverUtility();
 	SelectContactPage scp= new SelectContactPage(driver);
 	OpportunityInformationPage oip = new OpportunityInformationPage(driver);
-
+	OpportunityMoreInfoPage omip = new OpportunityMoreInfoPage(driver);
+	DoucmentsPage dp = new DoucmentsPage(driver);
 	/* Navigate to HomePage and verify*/
 	boolean flag = wlib.verifyElementDisplayedOrNot(driver, hp.getHomeLink());
 	Assert.assertEquals(true, flag);
@@ -184,28 +187,27 @@ public void Add_Document_to_OpportunityTest() throws Throwable {
 	op.getAddNewOppBtn().click();
 	Assert.assertEquals(true, wlib.verifyElementDisplayedOrNot(driver, cnop.getCreateNewOppText()));
 
-	/* Fetchinf opportunity name from excel and entering it */
+	/* Fetching opportunity name from excel and entering it */
 	String oppName = elib.getDataFromExcel("./testScriptdata.xlsx", "Opportunities", "TC_013", "OpportunityName");
 	cnop.getOppNameTxtBox().sendKeys(oppName);
 
-	/*Slecting contact from related to dropdown*/
+	/*Selecting contact from related to drop down*/
 	wlib.selectByValue(cnop.getRelatedToDD(),elib.getDataFromExcel("./testScriptdata.xlsx", "Opportunities", "TC_013", "RelatedTo"));
 	cnop.getAddRelatedToBtn().click();
 
 	/*switching to select contact window */
 	wlib.switchToTabOnURL(driver,"module=Contacts&action");
 
-	/* Fetchinf ocontact name from excel and entering it */
+	/* Fetching contact name from excel and entering it */
 	String contactName = elib.getDataFromExcel("./testScriptdata.xlsx", "Opportunities", "TC_013", "ContactName");
 	scp.getSearchTxtBox().sendKeys(contactName);
 	scp.getSearchBtn().click();
 	driver.findElement(By.xpath("//a[contains(text(),'"+contactName+"')]")).click();
 
 
-	/* switching to pareent window */
+	/* switching to parent window */
 	wlib.switchToTabOnURL(driver, "module=Potentials&action");
-	boolean flag2 = cnop.getRelatedTxtBox().getText().contains(contactName);
-	//Assert.assertEquals(true, flag2);
+	
 	cnop.getSaveBtn().click();
 	String headertxt = oip.getHeaderTxt().getText();
 
@@ -214,10 +216,14 @@ public void Add_Document_to_OpportunityTest() throws Throwable {
 	Reporter.log("Create_opportunity_with_ContactTest is created",true);
 	
 	/* Navigating to more information page*/
-//	oip.getMoreInfoLink().click();
-//	OpportunityMoreInfoPage omip = new OpportunityMoreInfoPage(driver);
-//	omip.getDocExpandBtn().click();
-//	wlib.clickUsingJavascript(driver,omip.getDocExpandBtn());
+	wlib.mousemoveOnElement(driver, oip.getMoreInfoLink());
+	oip.getDocumentLink().click();
+	omip.getAddDocBtn().click();
+	
+	/* Verifying the documents page*/
+	Assert.assertEquals(wlib.verifyElementDisplayedOrNot(driver, dp.getheaderMsg()), true);
+	dp.createDoucment(elib.getDataFromExcel("./testScriptdata.xlsx", "Opportunities", "TC_013", "Title"));
+	
 
 }
 
