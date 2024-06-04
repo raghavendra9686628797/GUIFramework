@@ -286,15 +286,14 @@ public class E2ELeadTest extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void convert_Lead_To_Opportunity() throws Throwable {
 
-		String filepath = "C:\\Users\\User\\OneDrive\\Desktop\\testScriptdata.xlsx";
+		String filepath = "./testdata/testScriptdata.xlsx";
 		String lastName = eLib.getDataFromExcel(filepath, "Leads",
 				"LD_023", "Last Name") + jLib.getRandomNumber();
-		System.out.println(lastName);
 		String company = eLib.getDataFromExcel(filepath, "Leads", "LD_023", "Company");
 		String opportunityName = eLib.getDataFromExcel(filepath, "Leads", "LD_023", "Opportunity Name")
 				+ jLib.getRandomNumber();
 		String searchInOption = eLib.getDataFromExcel(filepath, "Leads", "LD_023", "In");
-
+		System.out.println(lastName+" "+company+" "+opportunityName+" "+searchInOption);
 		String expectedCloseDate = jLib.getRequriedDateYYYYDDMM(7);
 
 		/* Navigate to Create Lead Page */
@@ -355,4 +354,5 @@ public class E2ELeadTest extends BaseClass {
 		String actExCloseDate = oppip.getExpectedCloseDateTxt().getText();
 		Assert.assertEquals(actExCloseDate.trim(), expectedCloseDate);
 	}
+	
 }
