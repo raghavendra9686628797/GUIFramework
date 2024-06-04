@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Create_opportunity_with_ContactTest is created]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-06-04T05:55:31Z" name="Default suite" finished-at="2024-06-04T05:56:29Z" duration-ms="58075">
+  <suite started-at="2024-06-04T07:32:12Z" name="Default suite" finished-at="2024-06-04T07:32:39Z" duration-ms="26669">
     <groups>
       <group name="regressionTest">
-        <method signature="OpportunityTest.Add_Document_to_OpportunityTest()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" name="Add_Document_to_OpportunityTest" class="com.comcast.crm.oppotunityTest.OpportunityTest"/>
+        <method signature="OpportunityTest.add_Quote_To_OpportunityTest()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" name="add_Quote_To_OpportunityTest" class="com.comcast.crm.oppotunityTest.OpportunityTest"/>
       </group> <!-- regressionTest -->
     </groups>
-    <test started-at="2024-06-04T05:55:31Z" name="Default test" finished-at="2024-06-04T05:56:29Z" duration-ms="58075">
+    <test started-at="2024-06-04T07:32:12Z" name="Default test" finished-at="2024-06-04T07:32:39Z" duration-ms="26669">
       <class name="com.comcast.crm.oppotunityTest.OpportunityTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" started-at="2024-06-04T05:55:31Z" name="configBS" finished-at="2024-06-04T05:55:31Z" duration-ms="80" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" started-at="2024-06-04T07:32:12Z" name="configBS" finished-at="2024-06-04T07:32:12Z" duration-ms="41" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" started-at="2024-06-04T05:55:31Z" name="configBC" finished-at="2024-06-04T05:55:35Z" duration-ms="4481" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" started-at="2024-06-04T07:32:12Z" name="configBC" finished-at="2024-06-04T07:32:14Z" duration-ms="1826" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" started-at="2024-06-04T05:55:35Z" name="configBM" finished-at="2024-06-04T05:55:43Z" duration-ms="7930" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" started-at="2024-06-04T07:32:14Z" name="configBM" finished-at="2024-06-04T07:32:17Z" duration-ms="3024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="Add_Document_to_OpportunityTest()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" started-at="2024-06-04T05:55:43Z" name="Add_Document_to_OpportunityTest" finished-at="2024-06-04T05:56:24Z" duration-ms="40582" status="PASS">
+        <test-method signature="add_Quote_To_OpportunityTest()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" started-at="2024-06-04T07:32:17Z" name="add_Quote_To_OpportunityTest" finished-at="2024-06-04T07:32:37Z" duration-ms="20004" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Create_opportunity_with_ContactTest is created]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Add_Document_to_OpportunityTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" started-at="2024-06-04T05:56:24Z" name="configAM" finished-at="2024-06-04T05:56:28Z" duration-ms="4035" status="PASS">
+        </test-method> <!-- add_Quote_To_OpportunityTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" started-at="2024-06-04T07:32:37Z" name="configAM" finished-at="2024-06-04T07:32:38Z" duration-ms="1487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" started-at="2024-06-04T05:56:28Z" name="configAC" finished-at="2024-06-04T05:56:29Z" duration-ms="1001" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" started-at="2024-06-04T07:32:38Z" name="configAC" finished-at="2024-06-04T07:32:39Z" duration-ms="310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@69ee81fc]" started-at="2024-06-04T05:56:29Z" name="configAS" finished-at="2024-06-04T05:56:29Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.oppotunityTest.OpportunityTest@700fb871]" started-at="2024-06-04T07:32:39Z" name="configAS" finished-at="2024-06-04T07:32:39Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->

@@ -48,5 +48,9 @@ public class OpportunityInformationPage {
 	public WebElement getDocumentLink() {
 		return documentLink;
 	}
-	
+	@FindBy(xpath = "//div[@id=\"More_Information_Modules_List\"]//a[text()='Quotes']") 
+	private WebElement quotesLink;
+	public WebElement getQuotesLink() {
+		return quotesLink;
+	}
 }

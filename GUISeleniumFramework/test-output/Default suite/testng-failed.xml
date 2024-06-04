@@ -6,10 +6,10 @@
       <class name="com.comcast.crm.oppotunityTest.OpportunityTest">
         <methods>
           <include name="configBM"/>
-          <include name="Add_Document_to_OpportunityTest"/>
           <include name="configAM"/>
           <include name="configBS"/>
           <include name="configBC"/>
+          <include name="add_Quote_To_OpportunityTest"/>
           <include name="configAS"/>
           <include name="configAC"/>
         </methods>

@@ -15,5 +15,13 @@ public class OpportunityMoreInfoPage {
 	public WebElement getAddDocBtn() {
 		return addDocBtn;
 	}
-	
+	@FindBy(xpath = "//input[@title=\"Add Quote\"]") private WebElement addQuoteBtn;
+	public WebElement getAddQuoteBtn() {
+		return addQuoteBtn;
+	}
+@FindBy(xpath = "//span[@class=\"lvtHeaderText\"]") private WebElement headerTxt;
+public WebElement getHeaderTxt() {
+	return headerTxt;
+}
+
 }
