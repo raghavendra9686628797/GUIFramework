@@ -18,7 +18,7 @@ public class createAQuoteWithContactName extends BaseClass {
 		
 
 		/* Create New Product*/
-		hp.getProductsLink().click();
+		//hp.getProductsLink().click();
 		ProductsPage pp=new ProductsPage(driver);
 		pp.getCreateProductImg().click();
 

@@ -7,14 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 
-/**
- * 
- * @author Deepak
- * 
- *         Contains Login page elements & business lib like login()
- *
- */
 public class HomePage {
+
 	WebDriver driver;
 
 	public HomePage(WebDriver driver) {
@@ -54,6 +48,25 @@ public class HomePage {
 
 	@FindBy(linkText = "Sign Out")
 	private WebElement signOutlnk;
+
+	public WebElement getVendorsLink() {
+		return vendorsLink;
+	}
+
+	@FindBy(linkText = "Products")
+	private WebElement productsLink;
+	@FindBy(linkText = "More")
+	private WebElement moretLink;
+	@FindBy(linkText = "Vendors")
+	private WebElement vendorsLink;
+
+	public WebElement getMoretLink() {
+		return moretLink;
+	}
+
+	public WebElement getProductsLink() {
+		return productsLink;
+		}
 	
 	@FindBy(xpath = "//a[text()='More']")
 	private WebElement morelink;
@@ -97,6 +110,7 @@ public class HomePage {
 
 	public WebElement getOpportunitiesLink() {
 		return opportunitiesLink;
+
 	}
 
 	public WebElement getOrgLink() {
@@ -118,3 +132,6 @@ public class HomePage {
 	}
 
 }
+
+
+
