@@ -13,8 +13,11 @@ public class ContactInformationPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(className = "dvHeaderText")
+	@FindBy(className = "lvtHeaderText")
 	private WebElement headerTxt;
+	
+	@FindBy(xpath = "//input[@name=\"lastname\"]") //created by - jhanvi
+	private WebElement lastnameTextfield;
 
 	@FindBy(id = "dtlview_Last Name")
 	private WebElement lastnameTxt;
@@ -27,6 +30,9 @@ public class ContactInformationPage {
 
 	@FindBy(xpath = "//td[@id='mouseArea_Organization Name']/a")
 	private WebElement orgNamelnk;
+	
+	@FindBy(xpath = "//input[@title=\"Save [Alt+S]\"]")
+	private WebElement saveButton;
 	
 	public WebElement getHeaderTxt() {
 		return headerTxt;
@@ -46,6 +52,11 @@ public class ContactInformationPage {
 
 	public WebElement getOrgNamelnk() {
 		return orgNamelnk;
+	}
+	
+	public void createContact(String orgName) {
+		lastnameTextfield.sendKeys(orgName);
+		saveButton.click();
 	}
 
 }

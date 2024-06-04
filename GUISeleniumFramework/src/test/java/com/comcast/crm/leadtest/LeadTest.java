@@ -136,9 +136,9 @@ public class LeadTest extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void cancel_The_Deleting_Lead() throws Throwable {
 
-		String lastName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_014", "Last Name")
+		String lastName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_015", "Last Name")
 				+ jLib.getRandomNumber();
-		String company = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_014", "Company");
+		String company = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_015", "Company");
 
 		/* Navigate to Create Lead Page */
 		HomePage hp = new HomePage(driver);
@@ -176,9 +176,9 @@ public class LeadTest extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void duplicate_Lead() throws Throwable {
 
-		String lastName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_014", "Last Name")
+		String lastName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_016", "Last Name")
 				+ jLib.getRandomNumber();
-		String company = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_014", "Company");
+		String company = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_016", "Company");
 
 		/* Navigate to Create Lead Page */
 		HomePage hp = new HomePage(driver);
@@ -204,11 +204,11 @@ public class LeadTest extends BaseClass {
 		/* Duplicate the Lead */
 		lip.getDuplicateBtn().click();
 		hdrMsg = lip.getDuplicatingHdrTxt().getText();
-		getBoolean=hdrMsg.contains(lastName);
+		getBoolean = hdrMsg.contains(lastName);
 		Assert.assertTrue(getBoolean);
-		
+
 		cnlp.getSaveBtn().click();
-		
+
 		/* Verify the duplicated Lead */
 		hdrMsg = lip.getHeaderMsg().getText();
 		getBoolean = hdrMsg.contains(lastName);
@@ -217,6 +217,55 @@ public class LeadTest extends BaseClass {
 		Assert.assertEquals(actLastName, lastName);
 		actCompany = lip.getCompanyTxt().getText();
 		Assert.assertEquals(actCompany, company);
-		
+
+	}
+
+	@Test(groups = "regressionTest")
+	public void create_Lead_With_Without_Last_Name() throws Throwable {
+
+		String company = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_017", "Company");
+		String expectedAlertMsg = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_017",
+				"ExpectedAlertMsg");
+
+		/* Navigate to Create Lead Page */
+		HomePage hp = new HomePage(driver);
+		hp.getLeadsLink().click();
+
+		LeadsPage lp = new LeadsPage(driver);
+		lp.getCreateLeadImg().click();
+
+		/* Create New Lead */
+		CreatingNewLeadPage cnlp = new CreatingNewLeadPage(driver);
+		cnlp.getCompanyEdt().sendKeys(company);
+		cnlp.getSaveBtn().click();
+
+		String actAlertMsg = wLib.switchtoAlertAndGetAlertMsg(driver);
+		wLib.switchtoAlertAndAccept(driver);
+		Assert.assertEquals(actAlertMsg, expectedAlertMsg);
+
+	}
+
+	@Test(groups = "regressionTest")
+	public void create_Lead_With_Without_Company() throws Throwable {
+
+		String lastName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_018", "Last Name");
+		String expectedAlertMsg = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_018",
+				"ExpectedAlertMsg");
+
+		/* Navigate to Create Lead Page */
+		HomePage hp = new HomePage(driver);
+		hp.getLeadsLink().click();
+
+		LeadsPage lp = new LeadsPage(driver);
+		lp.getCreateLeadImg().click();
+
+		/* Create New Lead */
+		CreatingNewLeadPage cnlp = new CreatingNewLeadPage(driver);
+		cnlp.getLastnameEdt().sendKeys(lastName);
+		cnlp.getSaveBtn().click();
+
+		String actAlertMsg = wLib.switchtoAlertAndGetAlertMsg(driver);
+		wLib.switchtoAlertAndAccept(driver);
+		Assert.assertEquals(actAlertMsg, expectedAlertMsg);
 	}
 }

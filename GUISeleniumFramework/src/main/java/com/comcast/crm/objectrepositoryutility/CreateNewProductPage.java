@@ -1,5 +1,7 @@
 package com.comcast.crm.objectrepositoryutility;
 
+import javax.management.loading.PrivateClassLoader;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +15,12 @@ public class CreateNewProductPage {
 	}
 	@FindBy(name="productname")
 	private WebElement productnameEdt;
+	@FindBy(name = "productcategory")
+	private WebElement productcategoryDD;
 	
+	public WebElement getProductcategoryDD() {
+		return productcategoryDD;
+	}
 	@FindBy(xpath="//input[contains(@title,'Save')]")
 	private WebElement saveBtn;
 	
@@ -44,7 +51,14 @@ public class CreateNewProductPage {
 	public WebElement getVendorSelectImg() {
 		return vendorSelectImg;
 	}
-
+	public void createProduct(String productName) {
+	
+		ProductsPage pp=new ProductsPage(driver);
+		pp.getCreateProductImg().click();
+		CreateNewProductPage cnp=new CreateNewProductPage(driver);
+		cnp.getProductnameEdt().sendKeys(productName);
+		cnp.getSaveBtn().click();
+	}
 	
 
 }

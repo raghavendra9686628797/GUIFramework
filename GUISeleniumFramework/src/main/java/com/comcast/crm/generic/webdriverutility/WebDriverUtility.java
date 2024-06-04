@@ -56,6 +56,17 @@ public class WebDriverUtility {
 		wait.until(ExpectedConditions.visibilityOf(element));
 
 	}
+	
+	/**
+	 * Wait for element to be Clickable
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void waitUntillElementClickable(WebDriver driver, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
 
 	/**
 	 * wait for element until element to be active and click
@@ -203,11 +214,11 @@ public class WebDriverUtility {
 	/**
 	 * select the value from the dropDown based on visible text
 	 * 
-	 * @param element
+	 * @param webElement
 	 * @param text
 	 */
-	public void select(WebElement element, String text) {
-		Select sel = new Select(element);
+	public void select(WebElement webElement, String text) {
+		Select sel = new Select(webElement);
 		sel.selectByVisibleText(text);
 	}
 
@@ -220,6 +231,16 @@ public class WebDriverUtility {
 	public void select(WebElement element, int index) {
 		Select sel = new Select(element);
 		sel.selectByIndex(index);
+	}
+	/**
+	 * select the value from the dropDown based on value attribute
+	 * 
+	 * @param element
+	 * @param value
+	 */
+	public void selectByValue(WebElement element, String value) {
+		Select sel = new Select(element);
+		sel.selectByValue(value);
 	}
 
 	/**
@@ -365,6 +386,7 @@ public class WebDriverUtility {
 		}
 		return isDisplayedOrNot;
 	}
+<<<<<<< HEAD
 	/**
 	 * @author Magendran
 	 * Single Click on the Element
@@ -389,6 +411,24 @@ public class WebDriverUtility {
 	public void scrollTillElement(WebDriver driver,WebElement ELement) {
 	
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
+=======
+	
+	public JavascriptExecutor javaScriptExecutorActions(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		return js;
+	}
+	/**
+	 * Scroll till element is visible
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void scrollUntilElementIsVisible(WebDriver driver, WebElement element) {
+		javaScriptExecutorActions(driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
 
 	        // Scroll to the element using JavaScript
 	        js.executeScript("arguments[0].scrollIntoView(true);", ELement);
