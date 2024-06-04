@@ -4,6 +4,9 @@
   <test thread-count="5" name="Default test(failed)">
     <classes>
 <<<<<<< HEAD
+      <class name="com.comcast.crm.quotestest.createFilterTest">
+=======
+<<<<<<< HEAD
       <class name="com.comcast.crm.campaigns.Advance_Search">
 =======
 <<<<<<< HEAD
@@ -20,9 +23,15 @@
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
         <methods>
+<<<<<<< HEAD
+=======
           <include name="Create_Product_With_Mandatory_Fields"/>
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <include name="configBM"/>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,6 +46,7 @@
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <include name="configAM"/>
 <<<<<<< HEAD
           <include name="searchWithNameContainsInCampaignName"/>
@@ -53,11 +63,18 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
           <include name="configBS"/>
           <include name="configBC"/>
+<<<<<<< HEAD
+          <include name="createFilter"/>
+=======
           <include name="create_Product_With_VendorName"/>
           <include name="Delete_the_product"/>
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
           <include name="configAS"/>
           <include name="configAC"/>
         </methods>
+<<<<<<< HEAD
+      </class> <!-- com.comcast.crm.quotestest.createFilterTest -->
+=======
 <<<<<<< HEAD
       </class> <!-- com.comcast.crm.campaigns.Advance_Search -->
 =======
@@ -75,6 +92,7 @@
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
