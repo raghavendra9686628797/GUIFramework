@@ -13,7 +13,7 @@ import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OrganizationInformationPage;
 import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 import com.comcast.crm.objectrepositoryutility.ProductsPage;
-import com.comcast.crm.objectrepositoryutility.QuotesPage;
+import com.comcast.crm.objectrepositoryutility.quotesPage;
 import com.comcast.crm.objectrepositoryutility.moreInformationPage;
 
 public class createAQuoteWithContactName extends BaseClass {
@@ -112,7 +112,7 @@ public class createAQuoteWithContactName extends BaseClass {
 		 * navigating to quote page and validation
 		 */
 		
-		QuotesPage qp = new QuotesPage(driver);
+		quotesPage qp = new quotesPage(driver);
 		mip.getquotesTab().click();
 		mip.getaddQuoteButton().isDisplayed();
 		String quoteText = eLib.getDataFromExcel("Organizations", 13, 9);

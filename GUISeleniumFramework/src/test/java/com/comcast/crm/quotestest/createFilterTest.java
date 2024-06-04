@@ -18,7 +18,7 @@ public class createFilterTest  extends BaseClass{
 		WebDriverUtility utility=new WebDriverUtility();
 		ExcelUtility fetch=new ExcelUtility();
 		String fetchHomeText=fetch.getDataFromExcel("Quotes", 19, 2);
-		String pageVerification=utility.pageVerification(qp.headerText);
+		String pageVerification=utility.pageVerification(qp.headerMessage);
 		
 		//page verification
 		Assert.assertEquals(fetchHomeText, pageVerification);
@@ -29,7 +29,7 @@ public class createFilterTest  extends BaseClass{
 		utility.singleClick(qp.Quotes);
 		String quotesText=fetch.getDataFromExcel("Quotes", 19, 3);
 
-		String quotesPage=utility.pageVerification(qp.headerText);
+		String quotesPage=utility.pageVerification(qp.headerMessage);
 		//page verification
 		Assert.assertEquals(quotesText, quotesPage);
 		createFilterPage cfp=new createFilterPage(driver);
