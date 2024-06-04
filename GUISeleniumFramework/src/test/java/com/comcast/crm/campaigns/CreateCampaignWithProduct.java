@@ -1,6 +1,7 @@
 package com.comcast.crm.campaigns;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 /**
  * 
  * @author Raghavendra
@@ -17,7 +18,7 @@ import com.comcast.crm.objectrepositoryutility.CampaignsPage;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.MoreLinkPage;
 
-import junit.framework.Assert;
+
 
 public class CreateCampaignWithProduct extends BaseClass {
 @Test
