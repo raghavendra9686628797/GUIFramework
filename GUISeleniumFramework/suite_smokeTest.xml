@@ -8,7 +8,7 @@
 	</groups>
 	<listeners>
 		<listener
-			class-name="com.comcast.crm.generic.listenerutility.ListImpClasss"></listener>
+			class-name="com.comcast.crm.generic.listenerutility.ListImpClass"></listener>
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
@@ -24,7 +24,6 @@
 				name="com.comcast.crm.organizationtest.createOrganization" />
 			<class name="com.comcast.crm.campaigns.Advance_Search" />
 			<class name="com.comcast.crm.organizationtest.addNoteTest" />
-			<class name="com.comcast.crm.contacttest.SampleTest" />
 			<class name="com.comcast.crm.leadtest.LeadTest" />
 			<class name="com.comcast.crm.campaigns.MassEditForCampaign" />
 			<class
