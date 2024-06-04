@@ -21,6 +21,20 @@ private WebElement CampaignCalanderIcon;
 @FindBy(xpath = "//img[@src=\"themes/softed/images/settingsBox.png\"]")
 private WebElement CampaignsettingsIcon;
 
+@FindBy(xpath = "(//input[@class=\"crmbutton small edit\"])[2]")
+private WebElement massEditButton;
+
+@FindBy(xpath = "//a[text()='Go to Advanced Search']")
+private WebElement advanceSearchLink;
+
+public WebElement getAdvanceSearchLink() {
+	return advanceSearchLink;
+}
+
+public WebElement getMassEditButton() {
+	return massEditButton;
+}
+
 public CampaignsPage(WebDriver driver) {
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
