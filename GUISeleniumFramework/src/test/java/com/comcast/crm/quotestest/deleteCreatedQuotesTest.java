@@ -83,7 +83,7 @@ static	String   subjectName =null;;
 			cop.shippingAddress.sendKeys(shipAddress);
 			//write back to the generateString 
 			fetch.setDataIntoExcel("Quotes", 4, 4, subjectName);
-			utility.scrollTillElement(driver, cop.products);
+			utility.scrollUntilElementIsVisible(driver, cop.products);
 			cop.products.click();
 			//switch to Product Page
 	//String parentProduct=driver.getWindowHandle();

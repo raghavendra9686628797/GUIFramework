@@ -26,11 +26,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  *
  */
 public class WebDriverUtility {
-	private static final Object ELement = null;
-
-
-
-
 
 	/**
 	 * wait for DOM page to load element before identifying the element in each page
@@ -62,7 +57,7 @@ public class WebDriverUtility {
 		wait.until(ExpectedConditions.visibilityOf(element));
 
 	}
-	
+
 	/**
 	 * Wait for element to be Clickable
 	 * 
@@ -73,15 +68,16 @@ public class WebDriverUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
+
 	public void waitUntillElementisInvisible(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
+
 	public void waitUntillElementisvisible(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
 
 	/**
 	 * wait for element until element to be active and click
@@ -213,14 +209,14 @@ public class WebDriverUtility {
 	public void switchtoAlertAndCancel(WebDriver driver) {
 		driver.switchTo().alert().dismiss();
 	}
-	
+
 	/**
 	 * Switch to Alert window and get Alert message
 	 * 
 	 * @param driver
 	 * @return
 	 */
-	
+
 	public String switchtoAlertAndGetAlertMsg(WebDriver driver) {
 		String alertMsg = driver.switchTo().alert().getText();
 		return alertMsg;
@@ -247,6 +243,7 @@ public class WebDriverUtility {
 		Select sel = new Select(element);
 		sel.selectByIndex(index);
 	}
+
 	/**
 	 * select the value from the dropDown based on value attribute
 	 * 
@@ -365,6 +362,7 @@ public class WebDriverUtility {
 
 	/**
 	 * Verify whether the Element is displayed or not
+	 * 
 	 * @param driver
 	 * @param xpath
 	 * @return
@@ -382,9 +380,10 @@ public class WebDriverUtility {
 		}
 		return isDisplayedOrNot;
 	}
-	
+
 	/**
 	 * Verify whether the Element is displayed or not
+	 * 
 	 * @param driver
 	 * @param xpath
 	 * @return
@@ -403,32 +402,32 @@ public class WebDriverUtility {
 	}
 
 	/**
-	 * @author Magendran
-	 * Single Click on the Element
+	 * @author Magendran Single Click on the Element
 	 */
 	public void singleClick(WebElement ele) {
 		ele.click();
-		}
+	}
+
 	/**
 	 * 
 	 * @author Magendran
 	 * @return text of the element
 	 */
-	public String  pageVerification(WebElement fetchText) {
+	public String pageVerification(WebElement fetchText) {
 		String data = fetchText.getText();
 		return data;
 	}
+
 	/**
-	 * @author Magendran
-	 * Scroll until the element;
+	 * @author Magendran Scroll until the element;
 	 */
-	
-	public void scrollTillElement(WebDriver driver,WebElement ELement) {
-	
+
+	public void scrollTillElement(WebDriver driver, WebElement ELement) {
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		 js.executeScript("arguments[0].scrollIntoView(true);", ELement);
+		js.executeScript("arguments[0].scrollIntoView(true);", ELement);
 	}
-	
+
 	/**
 	 * Scroll till element is visible
 	 * 
@@ -436,29 +435,18 @@ public class WebDriverUtility {
 	 * @param element
 	 */
 	public void scrollUntilElementIsVisible(WebDriver driver, WebElement element) {
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("arguments[0].scrollIntoView(true);", element);
-	    // Scroll to the element using JavaScript
-	}
-	
-
-	
-
-
-	       
-	private JavascriptExecutor javaScriptExecutorActions(WebDriver driver) {
-		// TODO Auto-generated method stub
-		return null;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		// Scroll to the element using JavaScript
 	}
 
 	/**
 	 * 
-	 * @author Magendran
-	 * accepts the alerts
+	 * @author Magendran accepts the alerts
 	 */
 	public void handleAlerts(WebDriver driver) {
-		Alert alert=driver.switchTo().alert();
+		Alert alert = driver.switchTo().alert();
 		alert.accept();
 	}
-	
+
 }

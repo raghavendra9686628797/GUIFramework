@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.comcast.crm.generic.listenerutility.ListImpClass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smokeTest"/>
+      </run>
+    </groups>
     <classes>
 <<<<<<< HEAD
+<<<<<<< HEAD
+      <class name="com.comcast.crm.contacttest.SampleTest">
+=======
+<<<<<<< HEAD
+      <class name="com.comcast.crm.campaigns.AddcontactToCampaign">
+=======
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,19 +60,26 @@
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 =======
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
+=======
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
         <methods>
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <include name="user_is_able_to_add_a_note"/>
 =======
           <include name="Add_Leads_For_Products"/>
 =======
 <<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
           <include name="add_Contact_To_Campaigns"/>
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 =======
@@ -69,9 +91,13 @@
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 =======
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
+=======
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
           <include name="configBM"/>
 <<<<<<< HEAD
 =======
@@ -84,9 +110,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
           <include name="Add_Organization_To_ExistedProduct"/>
 =======
 <<<<<<< HEAD
@@ -100,8 +129,13 @@
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
 <<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
+=======
+<<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
           <include name="configAM"/>
 <<<<<<< HEAD
 =======
@@ -132,6 +166,9 @@
           <include name="configBS"/>
           <include name="configBC"/>
 <<<<<<< HEAD
+          <include name="createConTactTest"/>
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -153,13 +190,24 @@
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 =======
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
+=======
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
           <include name="configAS"/>
           <include name="configAC"/>
         </methods>
 <<<<<<< HEAD
+<<<<<<< HEAD
+      </class> <!-- com.comcast.crm.contacttest.SampleTest -->
+=======
+<<<<<<< HEAD
+      </class> <!-- com.comcast.crm.campaigns.AddcontactToCampaign -->
+=======
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -201,9 +249,13 @@
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 =======
 >>>>>>> branch 'master' of https://github.com/raghavendra9686628797/GUIFramework.git
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
+=======
 >>>>>>> branch 'master' of https://github.com/Sanjay-Neelagund/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 >>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
+>>>>>>> branch 'master' of https://github.com/Basavaraj-A-Patil/GUIFramework.git
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

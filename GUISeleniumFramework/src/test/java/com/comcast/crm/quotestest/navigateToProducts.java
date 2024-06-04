@@ -37,7 +37,7 @@ public class navigateToProducts extends BaseClass {
 		
 		createQuotes cop=new createQuotes(driver);
 		cop.plusButon.click();
-		utility.scrollTillElement(driver, cop.products);
+		utility.scrollUntilElementIsVisible(driver, cop.products);
 		cop.products.click();
 		cop.products.click();
 		//switch to Product Page

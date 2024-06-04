@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="smokeTest"></include>
+		</run>
+	</groups>
+	<listeners>
+		<listener
+			class-name="com.comcast.crm.generic.listenerutility.ListImpClass"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.comcast.crm.producttest.CreateProductTest" />
+			<class name="com.comcast.crm.leadtest.CreateLeadTest" />
+			<class name="com.comcast.crm.campaigns.Create_Campaigns" />
+			<class name="com.comcast.crm.oppotunityTest.OpportunityTest" />
+			<class
+				name="com.comcast.crm.organizationtest.createAContactInMoreInfoTest" />
+			<class
+				name="com.comcast.crm.organizationtest.EditOrganizationTest" />
+			<class
+				name="com.comcast.crm.organizationtest.createOrganization" />
+			<class name="com.comcast.crm.campaigns.Advance_Search" />
+			<class name="com.comcast.crm.organizationtest.addNoteTest" />
+			<class name="com.comcast.crm.leadtest.LeadTest" />
+			<class name="com.comcast.crm.campaigns.MassEditForCampaign" />
+			<class
+				name="com.comcast.crm.campaigns.CreateCampaignWithProduct" />
+			<class name="com.comcast.crm.leadtest.E2ELeadTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

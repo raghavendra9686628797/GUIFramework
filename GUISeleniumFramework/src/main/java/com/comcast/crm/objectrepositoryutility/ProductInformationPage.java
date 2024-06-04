@@ -88,5 +88,5 @@ public class ProductInformationPage {
 	public WebElement getVendorNameTxt() {
 		return vendorNameTxt;
 	}
-
+	
 }
