@@ -2,6 +2,7 @@ package com.comcast.crm.oppotunityTest;
 
 import java.io.IOException;
 
+
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -22,7 +23,10 @@ import com.comcast.crm.objectrepositoryutility.OpportunityPage;
 import com.comcast.crm.objectrepositoryutility.OrganizationsPage;
 import com.comcast.crm.objectrepositoryutility.ProductsPage;
 import com.comcast.crm.objectrepositoryutility.SelectContactPage;
-
+/**
+ * 
+ * @author Asha R
+ */
 public class OpportunityTest  extends BaseClass{
 
 	@Test(groups = "regressionTest")
@@ -286,14 +290,18 @@ public void Add_Document_to_OpportunityTest() throws Throwable {
 		oip.getQuotesLink().click();
 		omip.getAddQuoteBtn().click();
 		cnqip.getSubjectTxtBox().sendKeys(elib.getDataFromExcel("./testScriptdata.xlsx", "Opportunities", "TC_016", "Subject"));
+		
+		/*Switch to org window and select org*/
 		cnip.getSelectorgBtn().click();
 		wlib.switchToTabOnURL(driver,"module=Accounts&action");
 		String orgName= elib.getDataFromExcel("./testScriptdata.xlsx", "Opportunities", "TC_016", "OrganizationName");
 		orp.getSerchEdt().sendKeys(orgName);
 		orp.getSearchNowBtn().click();
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
-
+		
+		/*handling pop up*/
 		wlib.switchtoAlertAndAccept(driver);
+		
 		/*Switch to parent window*/
 		wlib.switchToTabOnURL(driver, "http://localhost:8888/index.php");
 		cnip.getBillingAddTextArea().sendKeys(elib.getDataFromExcel("./testScriptdata.xlsx", "Opportunities", "TC_016", "BillingAddress"));
