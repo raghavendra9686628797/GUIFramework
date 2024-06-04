@@ -39,7 +39,7 @@ static	String   subjectName =null;;
 			String date=fetch.getDataFromExcel("Quotes", 4, 8);
 			String fetchHomeText=fetch.getDataFromExcel("Quotes", 1, 2);
 			String pageVerification=utility.pageVerification(qp.headerText);
-			
+		
 			//page verification
 			Assert.assertEquals(fetchHomeText, pageVerification);
 		

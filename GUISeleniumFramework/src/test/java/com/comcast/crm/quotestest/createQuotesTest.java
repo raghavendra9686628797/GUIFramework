@@ -92,10 +92,5 @@ public class createQuotesTest extends BaseClass {
 		String savedName=utility.pageVerification(cop.createdText);
 		Assert.assertTrue(true, savedName);
 }
-@Test(dependsOnMethods = "createQuotesPage")
-public void deleteQuotes() {
-	
-	
-}
 
 }

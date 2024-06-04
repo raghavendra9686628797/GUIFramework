@@ -26,6 +26,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  *
  */
 public class WebDriverUtility {
+	private static final Object ELement = null;
+
+
+
+
+
 	/**
 	 * wait for DOM page to load element before identifying the element in each page
 	 * 
@@ -386,7 +392,7 @@ public class WebDriverUtility {
 		}
 		return isDisplayedOrNot;
 	}
-<<<<<<< HEAD
+
 	/**
 	 * @author Magendran
 	 * Single Click on the Element
@@ -410,13 +416,10 @@ public class WebDriverUtility {
 	
 	public void scrollTillElement(WebDriver driver,WebElement ELement) {
 	
-		 JavascriptExecutor js = (JavascriptExecutor) driver;
-=======
-	
-	public JavascriptExecutor javaScriptExecutorActions(WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		return js;
+		 js.executeScript("arguments[0].scrollIntoView(true);", ELement);
 	}
+	
 	/**
 	 * Scroll till element is visible
 	 * 
@@ -424,15 +427,21 @@ public class WebDriverUtility {
 	 * @param element
 	 */
 	public void scrollUntilElementIsVisible(WebDriver driver, WebElement element) {
-		javaScriptExecutorActions(driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", element);
+	    // Scroll to the element using JavaScript
 	}
+	
 
 	
->>>>>>> branch 'master' of https://github.com/magendran07/GUIFramework.git
 
-	        // Scroll to the element using JavaScript
-	        js.executeScript("arguments[0].scrollIntoView(true);", ELement);
-}
+
+	       
+	private JavascriptExecutor javaScriptExecutorActions(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	/**
 	 * 
 	 * @author Magendran
