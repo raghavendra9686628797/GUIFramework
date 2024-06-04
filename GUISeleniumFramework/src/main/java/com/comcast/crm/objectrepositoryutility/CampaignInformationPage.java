@@ -19,6 +19,20 @@ private WebElement editCampaignName;
 @FindBy(xpath = "//img[@src=\"themes/softed/images/select.gif\"]")
 private WebElement addProductIcon;
 
+@FindBy(xpath = "//a[@href=\"index.php?action=CallRelatedList&module=Campaigns&record=38&parenttab=Marketing\"]")
+private WebElement moreinformationLink;
+
+@FindBy(xpath = "//span[@class=\"dvHeaderText\"]")
+private WebElement headertext;
+
+public WebElement getHeadertext() {
+	return headertext;
+}
+
+public WebElement getMoreinformationLink() {
+	return moreinformationLink;
+}
+
 @FindBy(xpath = "//input[@class=\"crmButton small save\"]")
 private WebElement savebutton;
 
