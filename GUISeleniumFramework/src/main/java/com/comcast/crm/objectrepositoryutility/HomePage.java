@@ -2,6 +2,7 @@ package com.comcast.crm.objectrepositoryutility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -52,9 +53,15 @@ public class HomePage {
 	public WebElement getVendorsLink() {
 		return vendorsLink;
 	}
+@FindAll({@FindBy (linkText = "Products"),@FindBy(xpath = "//a[text()='Products']")})
+private WebElement products;
+	public WebElement getProducts() {
+	return products;
+}
 
 	@FindBy(linkText = "Products")
 	private WebElement productsLink;
+	
 	@FindBy(linkText = "More")
 	private WebElement moretLink;
 	@FindBy(linkText = "Vendors")

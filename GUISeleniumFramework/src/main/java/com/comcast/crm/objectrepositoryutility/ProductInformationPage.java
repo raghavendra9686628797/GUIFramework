@@ -20,12 +20,12 @@ public class ProductInformationPage {
 	public WebElement getProductCategoryTxt() {
 		return productCategoryTxt;
 	}
-	@FindBy(xpath =  "//td[text()=\"More Information\"]")
+	@FindBy(xpath =  "//a[text()=\"More Information\"]")
 	private WebElement moreInformationBtn;
 	public WebElement getmoreInformationBtn() {
 		return moreInformationBtn;
 	}
-	@FindBy(xpath =  "(//*[@id=\"RLContents\"]/table[9]/tbody/tr[1]/td/div/text())[2]")
+	@FindBy(id = "show_Products_Accounts")
 	private WebElement organizationTable;
 	public WebElement getorganizationTable() {
 		return organizationTable;
@@ -39,6 +39,38 @@ public class ProductInformationPage {
 	private WebElement organizationNameinMoreTxt;
 	public WebElement getorganizationNameinMoreTxt() {
 		return organizationNameinMoreTxt;
+	}
+	
+	public WebElement getMoreInformationBtn() {
+		return moreInformationBtn;
+	}
+	public WebElement getOrganizationTable() {
+		return organizationTable;
+	}
+	public WebElement getSelectOrganizationsBtn() {
+		return selectOrganizationsBtn;
+	}
+	public WebElement getOrganizationNameinMoreTxt() {
+		return organizationNameinMoreTxt;
+	}
+
+	@FindBy(id="show_Products_Leads")
+	private WebElement showLeadsImg;
+	
+	@FindBy(xpath = "//input[@title=\"Select Leads\"]")
+	private WebElement selectLeadsBtn;
+	
+	@FindBy(xpath="//span[@vtfieldname=\"lastname\"]/../a")
+	private WebElement lastNameLnk;
+
+	public WebElement getLastNameLnk() {
+		return lastNameLnk;
+	}
+	public WebElement getShowLeadsImg() {
+		return showLeadsImg;
+	}
+	public WebElement getSelectLeadsBtn() {
+		return selectLeadsBtn;
 	}
 	
 	

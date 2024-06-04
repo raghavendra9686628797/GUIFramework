@@ -34,9 +34,14 @@ public class moreInformationPage {
 	@FindBy(xpath = "//input[@value=\"Add Contact\"]")
 	private WebElement addcontactButton;
 	
+<<<<<<< HEAD
 	@FindBy(xpath = "//input[@title=\"Add Quote\"]")
 	private WebElement addQuoteButton;
 	
+=======
+
+
+>>>>>>> branch 'master' of https://github.com/JhanaviAsopa/GUIFramework.git
 	public WebElement getmoreInformationLink() {
 		return moreInformationLink;
 	}
