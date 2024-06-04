@@ -2,6 +2,8 @@ package com.comcast.crm.generic.fileutility;
 
 import java.io.FileInputStream;
 import java.util.Properties;
+
+import org.openqa.selenium.WebElement;
 /**
  * 
  * @author Deepak
@@ -20,8 +22,6 @@ public class FileUtility {
 		Properties pObj = new Properties();
 		pObj.load(fis);
 		String data = pObj.getProperty(key);
-		
 		return data;
 	}
-
 }

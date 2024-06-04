@@ -1,5 +1,8 @@
 package com.comcast.crm.leadtest;
 
+/**
+ * @author Basavaraj
+ */
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -283,11 +286,16 @@ public class E2ELeadTest extends BaseClass {
 	@Test(groups = "regressionTest")
 	public void convert_Lead_To_Opportunity() throws Throwable {
 
-		String lastName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "Last Name")
+		String filepath = "C:\\Users\\User\\OneDrive\\Desktop\\testScriptdata.xlsx";
+		String lastName = eLib.getDataFromExcel(filepath, "Leads",
+				"LD_023", "Last Name") + jLib.getRandomNumber();
+		System.out.println(lastName);
+		String company = eLib.getDataFromExcel(filepath, "Leads", "LD_023", "Company");
+		String opportunityName = eLib.getDataFromExcel(filepath, "Leads", "LD_023", "Opportunity Name")
 				+ jLib.getRandomNumber();
-		String company = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "Company");
-		String opportunityName = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "Opportunity Name")+ jLib.getRandomNumber();
-		String searchInOption = eLib.getDataFromExcel("./testdata/testScriptdata.xlsx", "Leads", "LD_023", "In");
+		String searchInOption = eLib.getDataFromExcel(filepath, "Leads", "LD_023", "In");
+
+		String expectedCloseDate = jLib.getRequriedDateYYYYDDMM(7);
 
 		/* Navigate to Create Lead Page */
 		HomePage hp = new HomePage(driver);
@@ -315,26 +323,36 @@ public class E2ELeadTest extends BaseClass {
 		wLib.waitForElementPresent(driver, lip.getConvertLeadPopupHdr());
 		String hdrText = lip.getConvertLeadPopupHdr().getText();
 		getBoolean = hdrText.contains(lastName);
+		Assert.assertTrue(getBoolean);
 		lip.getOpportunityCheckBox().click();
+		lip.getOpportunityNameEdt().clear();
 		lip.getOpportunityNameEdt().sendKeys(opportunityName);
-		lip.getExpectedCloseDateEdt().sendKeys(jLib.getRequriedDateYYYYDDMM(7));
+		lip.getExpectedCloseDateEdt().sendKeys(expectedCloseDate);
 		lip.getSaveBtn().click();
-		
+
 		/* Verify Org Name */
 		OrganizationInformationPage oip = new OrganizationInformationPage(driver);
 		String orgName = oip.getOrgNameText().getText();
 		Assert.assertEquals(orgName, company);
-		
-		/* Navigate to opportunity Page and search the created opportunity*/
+
+		/* Navigate to opportunity Page and search the created opportunity */
 		hp.getOpportunitiesLink().click();
 		OpportunityPage opp = new OpportunityPage(driver);
 		opp.getSearchForEdt().sendKeys(opportunityName);
 		wLib.select(opp.getSearchFieldDD(), searchInOption);
 		opp.getSearchNowBtn().click();
 		driver.findElement(By.linkText(opportunityName)).click();
-		
+
 		/* Verify the opportunity */
-		OpportunityInformationPage oppip  = new OpportunityInformationPage(driver);
-		
+		OpportunityInformationPage oppip = new OpportunityInformationPage(driver);
+		String oppHdrTxt = oppip.getHeaderTxt().getText();
+		getBoolean = oppHdrTxt.contains(opportunityName);
+		Assert.assertTrue(getBoolean);
+		String actOpportunityName = oppip.getOpportunityNameTxt().getText();
+		Assert.assertEquals(actOpportunityName, opportunityName);
+		orgName = oppip.getOrganizationLnk().getText();
+		Assert.assertEquals(orgName, company);
+		String actExCloseDate = oppip.getExpectedCloseDateTxt().getText();
+		Assert.assertEquals(actExCloseDate.trim(), expectedCloseDate);
 	}
 }
