@@ -8,7 +8,9 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -363,5 +365,42 @@ public class WebDriverUtility {
 		}
 		return isDisplayedOrNot;
 	}
+	/**
+	 * @author Magendran
+	 * Single Click on the Element
+	 */
+	public void singleClick(WebElement ele) {
+		ele.click();
+		}
+	/**
+	 * 
+	 * @author Magendran
+	 * @return text of the element
+	 */
+	public String  pageVerification(WebElement fetchText) {
+		String data = fetchText.getText();
+		return data;
+	}
+	/**
+	 * @author Magendran
+	 * Scroll until the element;
+	 */
+	
+	public void scrollTillElement(WebDriver driver,WebElement ELement) {
+	
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
 
+	        // Scroll to the element using JavaScript
+	        js.executeScript("arguments[0].scrollIntoView(true);", ELement);
+}
+	/**
+	 * 
+	 * @author Magendran
+	 * accepts the alerts
+	 */
+	public void handleAlerts(WebDriver driver) {
+		Alert alert=driver.switchTo().alert();
+		alert.accept();
+	}
+	
 }
