@@ -31,6 +31,8 @@ public class moreInformationPage {
 	@FindBy(xpath = "//input[@value=\"Add Contact\"]")
 	private WebElement addcontactButton;
 	
+
+
 	public WebElement getmoreInformationLink() {
 		return moreInformationLink;
 	}
